@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -l nodes=1:ppn=20,walltime=24:00:00 -q gigat
+cd ${PBS_O_WORKDIR}
+export mkPrefix=/u/sw
+export PYTHONPATH="${PYTHONPATH}:/u/caldana/archive/pip"
+source $mkPrefix/etc/profile 
+module load gcc-glibc/11 dealii vtk
+python /u/caldana/archive/topological-pinns/train_kirchoff_pinn.py &> "train-$(date +"%Y-%m-%d_%H-%M-%S").log"

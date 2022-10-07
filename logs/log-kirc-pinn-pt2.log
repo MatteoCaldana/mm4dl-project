@@ -1,0 +1,2833 @@
+2022-10-05 07:07:39.702156: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /u/sw/toolchains/gcc-glibc/11/pkgs/vtk/9.0.3/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/dealii/9.3.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/trilinos/13.0.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/tbb/2021.3.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/suitesparse/5.10.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/metis/5.1.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/openblas/0.3.15/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/scotch/6.1.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/scalapack/2.1.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/netcdf/4.8.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/hdf5/1.12.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/mumps/5.4.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/matio/1.5.21/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/hypre/2.22.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/superlu/5.2.2/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/glpk/5.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/boost/1.76.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/blacs/1.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/petsc/3.15.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/p4est/2.3.2/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/fftw/3.3.9/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/arpack/3.8.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/gsl/2.7/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/adol-c/2.7.2/lib64
+2022-10-05 07:07:39.702228: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2022-10-05 07:08:49.179223: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /u/sw/toolchains/gcc-glibc/11/pkgs/vtk/9.0.3/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/dealii/9.3.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/trilinos/13.0.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/tbb/2021.3.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/suitesparse/5.10.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/metis/5.1.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/openblas/0.3.15/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/scotch/6.1.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/scalapack/2.1.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/netcdf/4.8.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/hdf5/1.12.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/mumps/5.4.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/matio/1.5.21/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/hypre/2.22.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/superlu/5.2.2/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/glpk/5.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/boost/1.76.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/blacs/1.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/petsc/3.15.1/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/p4est/2.3.2/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/fftw/3.3.9/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/arpack/3.8.0/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/gsl/2.7/lib:/u/sw/toolchains/gcc-glibc/11/pkgs/adol-c/2.7.2/lib64
+2022-10-05 07:08:49.179281: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2022-10-05 07:08:49.179318: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gigat109.mate.polimi.it): /proc/driver/nvidia/version does not exist
+2022-10-05 07:08:49.179715: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Data size (7577600, 10)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense (Dense)               (None, 80)                400       
+                                                                 
+ dense_1 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_2 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_3 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_4 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_5 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_6 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_7 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_8 (Dense)             (None, 3)                 243       
+                                                                 
+=================================================================
+Total params: 46,003
+Trainable params: 46,003
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2500/2500 - 4s - loss: 0.0044 - loo: 0.2650 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 2/200
+2500/2500 - 4s - loss: 0.0023 - loo: 0.2246 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 3/200
+2500/2500 - 4s - loss: 0.0021 - loo: 0.2155 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 4/200
+2500/2500 - 4s - loss: 0.0018 - loo: 0.2084 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 5/200
+2500/2500 - 4s - loss: 8.9449e-04 - loo: 0.1367 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 6/200
+2500/2500 - 4s - loss: 4.7979e-04 - loo: 0.0967 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 7/200
+2500/2500 - 4s - loss: 4.6219e-04 - loo: 0.0954 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 8/200
+2500/2500 - 4s - loss: 4.1890e-04 - loo: 0.0885 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 9/200
+2500/2500 - 4s - loss: 3.6434e-04 - loo: 0.0807 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 10/200
+2500/2500 - 4s - loss: 3.3105e-04 - loo: 0.0748 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 11/200
+2500/2500 - 4s - loss: 3.2620e-04 - loo: 0.0739 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 12/200
+2500/2500 - 4s - loss: 3.1031e-04 - loo: 0.0712 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 13/200
+2500/2500 - 4s - loss: 2.9780e-04 - loo: 0.0684 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 14/200
+2500/2500 - 4s - loss: 2.7942e-04 - loo: 0.0652 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 15/200
+2500/2500 - 4s - loss: 2.7264e-04 - loo: 0.0638 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 16/200
+2500/2500 - 4s - loss: 2.6879e-04 - loo: 0.0621 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 17/200
+2500/2500 - 4s - loss: 2.6798e-04 - loo: 0.0619 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 18/200
+2500/2500 - 4s - loss: 2.5381e-04 - loo: 0.0598 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 19/200
+2500/2500 - 4s - loss: 2.5032e-04 - loo: 0.0601 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 20/200
+2500/2500 - 4s - loss: 2.4881e-04 - loo: 0.0608 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 21/200
+2500/2500 - 4s - loss: 2.4659e-04 - loo: 0.0598 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 22/200
+2500/2500 - 4s - loss: 2.4489e-04 - loo: 0.0598 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 23/200
+2500/2500 - 4s - loss: 2.4103e-04 - loo: 0.0585 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 24/200
+2500/2500 - 4s - loss: 2.2966e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 25/200
+2500/2500 - 4s - loss: 2.3135e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 26/200
+2500/2500 - 4s - loss: 2.2773e-04 - loo: 0.0571 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 27/200
+2500/2500 - 4s - loss: 2.2672e-04 - loo: 0.0563 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 28/200
+2500/2500 - 4s - loss: 2.2594e-04 - loo: 0.0561 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 29/200
+2500/2500 - 4s - loss: 2.2066e-04 - loo: 0.0560 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 30/200
+2500/2500 - 4s - loss: 2.2851e-04 - loo: 0.0572 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 31/200
+2500/2500 - 4s - loss: 2.1621e-04 - loo: 0.0548 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 32/200
+2500/2500 - 4s - loss: 2.1447e-04 - loo: 0.0523 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 33/200
+2500/2500 - 4s - loss: 2.2403e-04 - loo: 0.0511 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 34/200
+2500/2500 - 4s - loss: 2.2336e-04 - loo: 0.0529 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 35/200
+2500/2500 - 4s - loss: 2.3059e-04 - loo: 0.0549 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 36/200
+2500/2500 - 4s - loss: 2.1906e-04 - loo: 0.0539 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 37/200
+2500/2500 - 4s - loss: 2.1781e-04 - loo: 0.0532 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 38/200
+2500/2500 - 4s - loss: 2.1511e-04 - loo: 0.0529 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 39/200
+2500/2500 - 4s - loss: 2.1463e-04 - loo: 0.0504 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 40/200
+2500/2500 - 4s - loss: 2.1769e-04 - loo: 0.0519 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 41/200
+2500/2500 - 4s - loss: 2.1346e-04 - loo: 0.0520 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 42/200
+2500/2500 - 4s - loss: 2.0869e-04 - loo: 0.0519 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 43/200
+2500/2500 - 4s - loss: 2.1141e-04 - loo: 0.0505 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 44/200
+2500/2500 - 4s - loss: 2.1991e-04 - loo: 0.0501 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 45/200
+2500/2500 - 4s - loss: 2.1534e-04 - loo: 0.0481 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 46/200
+2500/2500 - 4s - loss: 2.1336e-04 - loo: 0.0499 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 47/200
+2500/2500 - 4s - loss: 2.2371e-04 - loo: 0.0513 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 48/200
+2500/2500 - 4s - loss: 2.1510e-04 - loo: 0.0481 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 49/200
+2500/2500 - 4s - loss: 2.1117e-04 - loo: 0.0477 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 50/200
+2500/2500 - 4s - loss: 2.1510e-04 - loo: 0.0504 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 51/200
+2500/2500 - 4s - loss: 2.1473e-04 - loo: 0.0500 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 52/200
+2500/2500 - 4s - loss: 2.1670e-04 - loo: 0.0499 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 53/200
+2500/2500 - 4s - loss: 1.8175e-04 - loo: 0.0399 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 54/200
+2500/2500 - 4s - loss: 1.7997e-04 - loo: 0.0439 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 55/200
+2500/2500 - 4s - loss: 1.7090e-04 - loo: 0.0438 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 56/200
+2500/2500 - 4s - loss: 1.7411e-04 - loo: 0.0402 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 57/200
+2500/2500 - 4s - loss: 1.7601e-04 - loo: 0.0440 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 58/200
+2500/2500 - 4s - loss: 1.7752e-04 - loo: 0.0441 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 59/200
+2500/2500 - 4s - loss: 1.7169e-04 - loo: 0.0434 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 60/200
+2500/2500 - 4s - loss: 1.7304e-04 - loo: 0.0414 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 61/200
+2500/2500 - 4s - loss: 1.7348e-04 - loo: 0.0429 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 62/200
+2500/2500 - 4s - loss: 1.7270e-04 - loo: 0.0412 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 63/200
+2500/2500 - 4s - loss: 1.7575e-04 - loo: 0.0377 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 64/200
+2500/2500 - 4s - loss: 1.8908e-04 - loo: 0.0369 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 65/200
+2500/2500 - 4s - loss: 1.7575e-04 - loo: 0.0434 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 66/200
+2500/2500 - 4s - loss: 1.4642e-04 - loo: 0.0370 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 67/200
+2500/2500 - 4s - loss: 1.3706e-04 - loo: 0.0359 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 68/200
+2500/2500 - 4s - loss: 1.5332e-04 - loo: 0.0332 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 69/200
+2500/2500 - 4s - loss: 1.5268e-04 - loo: 0.0345 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 70/200
+2500/2500 - 4s - loss: 1.3747e-04 - loo: 0.0365 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 71/200
+2500/2500 - 4s - loss: 1.5345e-04 - loo: 0.0331 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 72/200
+2500/2500 - 4s - loss: 1.3640e-04 - loo: 0.0364 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 73/200
+2500/2500 - 4s - loss: 1.4794e-04 - loo: 0.0325 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 74/200
+2500/2500 - 4s - loss: 1.5903e-04 - loo: 0.0368 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 75/200
+2500/2500 - 4s - loss: 1.4611e-04 - loo: 0.0320 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 76/200
+2500/2500 - 4s - loss: 1.5065e-04 - loo: 0.0358 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 77/200
+2500/2500 - 4s - loss: 1.2855e-04 - loo: 0.0345 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 78/200
+2500/2500 - 4s - loss: 1.3473e-04 - loo: 0.0339 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 79/200
+2500/2500 - 4s - loss: 1.3112e-04 - loo: 0.0352 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 80/200
+2500/2500 - 4s - loss: 1.2569e-04 - loo: 0.0336 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 81/200
+2500/2500 - 4s - loss: 1.3754e-04 - loo: 0.0311 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 82/200
+2500/2500 - 4s - loss: 1.2641e-04 - loo: 0.0356 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 83/200
+2500/2500 - 4s - loss: 1.3521e-04 - loo: 0.0304 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 84/200
+2500/2500 - 4s - loss: 1.3784e-04 - loo: 0.0362 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 85/200
+2500/2500 - 4s - loss: 1.4348e-04 - loo: 0.0331 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 86/200
+2500/2500 - 4s - loss: 1.3767e-04 - loo: 0.0321 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 87/200
+2500/2500 - 4s - loss: 1.6145e-04 - loo: 0.0386 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 88/200
+2500/2500 - 4s - loss: 1.3094e-04 - loo: 0.0347 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 89/200
+2500/2500 - 4s - loss: 1.4009e-04 - loo: 0.0312 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 90/200
+2500/2500 - 4s - loss: 1.6370e-04 - loo: 0.0381 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 91/200
+2500/2500 - 4s - loss: 1.0761e-04 - loo: 0.0296 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 92/200
+2500/2500 - 4s - loss: 9.0582e-05 - loo: 0.0282 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 93/200
+2500/2500 - 4s - loss: 9.1392e-05 - loo: 0.0273 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 94/200
+2500/2500 - 4s - loss: 8.0736e-05 - loo: 0.0264 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 95/200
+2500/2500 - 4s - loss: 9.9693e-05 - loo: 0.0282 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 96/200
+2500/2500 - 4s - loss: 8.1907e-05 - loo: 0.0254 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 97/200
+2500/2500 - 4s - loss: 9.4733e-05 - loo: 0.0272 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 98/200
+2500/2500 - 4s - loss: 8.4729e-05 - loo: 0.0275 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 99/200
+2500/2500 - 4s - loss: 7.8013e-05 - loo: 0.0259 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 100/200
+2500/2500 - 4s - loss: 9.1609e-05 - loo: 0.0255 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 101/200
+2500/2500 - 4s - loss: 9.7514e-05 - loo: 0.0277 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 102/200
+2500/2500 - 4s - loss: 7.9947e-05 - loo: 0.0257 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 103/200
+2500/2500 - 4s - loss: 9.2436e-05 - loo: 0.0258 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 104/200
+2500/2500 - 4s - loss: 9.1608e-05 - loo: 0.0275 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 105/200
+2500/2500 - 4s - loss: 8.5192e-05 - loo: 0.0256 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 106/200
+2500/2500 - 4s - loss: 1.0253e-04 - loo: 0.0281 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 107/200
+2500/2500 - 4s - loss: 7.3867e-05 - loo: 0.0235 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 108/200
+2500/2500 - 4s - loss: 1.0875e-04 - loo: 0.0301 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 109/200
+2500/2500 - 4s - loss: 7.4407e-05 - loo: 0.0255 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 110/200
+2500/2500 - 4s - loss: 8.8718e-05 - loo: 0.0254 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 111/200
+2500/2500 - 4s - loss: 8.9668e-05 - loo: 0.0281 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 112/200
+2500/2500 - 4s - loss: 9.5712e-05 - loo: 0.0276 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 113/200
+2500/2500 - 4s - loss: 8.1310e-05 - loo: 0.0257 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 114/200
+2500/2500 - 4s - loss: 9.1853e-05 - loo: 0.0256 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 115/200
+2500/2500 - 4s - loss: 1.0335e-04 - loo: 0.0279 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 116/200
+2500/2500 - 4s - loss: 7.9466e-05 - loo: 0.0266 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 117/200
+2500/2500 - 4s - loss: 7.6589e-05 - loo: 0.0254 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 118/200
+2500/2500 - 4s - loss: 5.8472e-05 - loo: 0.0218 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 119/200
+2500/2500 - 4s - loss: 5.2053e-05 - loo: 0.0208 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 120/200
+2500/2500 - 4s - loss: 5.3608e-05 - loo: 0.0210 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 121/200
+2500/2500 - 4s - loss: 5.0973e-05 - loo: 0.0203 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 122/200
+2500/2500 - 4s - loss: 5.1122e-05 - loo: 0.0202 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 123/200
+2500/2500 - 4s - loss: 5.0785e-05 - loo: 0.0202 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 124/200
+2500/2500 - 4s - loss: 5.0076e-05 - loo: 0.0203 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 125/200
+2500/2500 - 4s - loss: 4.3012e-05 - loo: 0.0184 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 126/200
+2500/2500 - 4s - loss: 5.4607e-05 - loo: 0.0202 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 127/200
+2500/2500 - 4s - loss: 4.1809e-05 - loo: 0.0184 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 128/200
+2500/2500 - 4s - loss: 4.5953e-05 - loo: 0.0191 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 129/200
+2500/2500 - 4s - loss: 5.6259e-05 - loo: 0.0197 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 130/200
+2500/2500 - 4s - loss: 4.6239e-05 - loo: 0.0197 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 131/200
+2500/2500 - 4s - loss: 4.3638e-05 - loo: 0.0186 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 132/200
+2500/2500 - 4s - loss: 3.6646e-05 - loo: 0.0175 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 133/200
+2500/2500 - 4s - loss: 5.0295e-05 - loo: 0.0188 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 134/200
+2500/2500 - 4s - loss: 5.1575e-05 - loo: 0.0202 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 135/200
+2500/2500 - 4s - loss: 4.7940e-05 - loo: 0.0188 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 136/200
+2500/2500 - 4s - loss: 3.2859e-05 - loo: 0.0168 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 137/200
+2500/2500 - 4s - loss: 5.7574e-05 - loo: 0.0191 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 138/200
+2500/2500 - 4s - loss: 5.5090e-05 - loo: 0.0204 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 139/200
+2500/2500 - 4s - loss: 3.2318e-05 - loo: 0.0168 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 140/200
+2500/2500 - 4s - loss: 3.2285e-05 - loo: 0.0165 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 141/200
+2500/2500 - 4s - loss: 5.0156e-05 - loo: 0.0197 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 142/200
+2500/2500 - 4s - loss: 3.2604e-05 - loo: 0.0170 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 143/200
+2500/2500 - 4s - loss: 3.2780e-05 - loo: 0.0171 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 144/200
+2500/2500 - 4s - loss: 4.7960e-05 - loo: 0.0193 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 145/200
+2500/2500 - 4s - loss: 3.8167e-05 - loo: 0.0182 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 146/200
+2500/2500 - 4s - loss: 4.1065e-05 - loo: 0.0183 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 147/200
+2500/2500 - 4s - loss: 4.1340e-05 - loo: 0.0197 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 148/200
+2500/2500 - 4s - loss: 3.1760e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 149/200
+2500/2500 - 4s - loss: 3.2186e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 150/200
+2500/2500 - 4s - loss: 6.6681e-05 - loo: 0.0207 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 151/200
+2500/2500 - 4s - loss: 4.8052e-05 - loo: 0.0196 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 152/200
+2500/2500 - 4s - loss: 5.1776e-05 - loo: 0.0191 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 153/200
+2500/2500 - 4s - loss: 8.0012e-05 - loo: 0.0238 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 154/200
+2500/2500 - 4s - loss: 4.6694e-05 - loo: 0.0199 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 155/200
+2500/2500 - 4s - loss: 3.9560e-05 - loo: 0.0184 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 156/200
+2500/2500 - 4s - loss: 3.1542e-05 - loo: 0.0172 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 157/200
+2500/2500 - 4s - loss: 3.7248e-05 - loo: 0.0178 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 158/200
+2500/2500 - 4s - loss: 3.3861e-05 - loo: 0.0180 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 159/200
+2500/2500 - 4s - loss: 3.1223e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 160/200
+2500/2500 - 4s - loss: 3.0933e-05 - loo: 0.0170 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 161/200
+2500/2500 - 4s - loss: 5.4007e-05 - loo: 0.0199 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 162/200
+2500/2500 - 4s - loss: 5.6702e-05 - loo: 0.0213 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 163/200
+2500/2500 - 4s - loss: 3.0060e-05 - loo: 0.0172 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 164/200
+2500/2500 - 4s - loss: 3.0617e-05 - loo: 0.0170 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 165/200
+2500/2500 - 4s - loss: 6.3620e-05 - loo: 0.0217 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 166/200
+2500/2500 - 4s - loss: 3.0411e-05 - loo: 0.0177 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 167/200
+2500/2500 - 4s - loss: 3.0064e-05 - loo: 0.0171 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 168/200
+2500/2500 - 4s - loss: 3.0315e-05 - loo: 0.0172 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 169/200
+2500/2500 - 4s - loss: 5.3375e-05 - loo: 0.0208 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 170/200
+2500/2500 - 4s - loss: 2.9713e-05 - loo: 0.0173 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 171/200
+2500/2500 - 4s - loss: 2.9578e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 172/200
+2500/2500 - 4s - loss: 3.0562e-05 - loo: 0.0176 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 173/200
+2500/2500 - 4s - loss: 4.5209e-05 - loo: 0.0203 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 174/200
+2500/2500 - 4s - loss: 3.5022e-05 - loo: 0.0179 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 175/200
+2500/2500 - 4s - loss: 3.5900e-05 - loo: 0.0187 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 176/200
+2500/2500 - 4s - loss: 2.9117e-05 - loo: 0.0172 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 177/200
+2500/2500 - 4s - loss: 4.8860e-05 - loo: 0.0200 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 178/200
+2500/2500 - 4s - loss: 6.2557e-05 - loo: 0.0230 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 179/200
+2500/2500 - 4s - loss: 2.8860e-05 - loo: 0.0174 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 180/200
+2500/2500 - 4s - loss: 2.9796e-05 - loo: 0.0174 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 181/200
+2500/2500 - 4s - loss: 5.5486e-05 - loo: 0.0212 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 182/200
+2500/2500 - 4s - loss: 2.9749e-05 - loo: 0.0181 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 183/200
+2500/2500 - 4s - loss: 2.9349e-05 - loo: 0.0176 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 184/200
+2500/2500 - 4s - loss: 3.0208e-05 - loo: 0.0182 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 185/200
+2500/2500 - 4s - loss: 4.7223e-05 - loo: 0.0208 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 186/200
+2500/2500 - 4s - loss: 3.9045e-05 - loo: 0.0192 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 187/200
+2500/2500 - 4s - loss: 3.4023e-05 - loo: 0.0185 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 188/200
+2500/2500 - 4s - loss: 5.1688e-05 - loo: 0.0217 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 189/200
+2500/2500 - 4s - loss: 3.1104e-05 - loo: 0.0186 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 190/200
+2500/2500 - 4s - loss: 2.7409e-05 - loo: 0.0171 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 191/200
+2500/2500 - 4s - loss: 2.7589e-05 - loo: 0.0175 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 192/200
+2500/2500 - 4s - loss: 2.7195e-05 - loo: 0.0172 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 193/200
+2500/2500 - 4s - loss: 2.6391e-05 - loo: 0.0169 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 194/200
+2500/2500 - 4s - loss: 2.6263e-05 - loo: 0.0169 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 195/200
+2500/2500 - 4s - loss: 2.6050e-05 - loo: 0.0168 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 196/200
+2500/2500 - 4s - loss: 2.6057e-05 - loo: 0.0168 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 197/200
+2500/2500 - 4s - loss: 2.5495e-05 - loo: 0.0165 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 198/200
+2500/2500 - 4s - loss: 2.5403e-05 - loo: 0.0165 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 199/200
+2500/2500 - 4s - loss: 2.6526e-05 - loo: 0.0169 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 200/200
+2500/2500 - 4s - loss: 2.4591e-05 - loo: 0.0162 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Total training time: 736.4855391979218 [s]
+236800/236800 - 271s - 271s/epoch - 1ms/step
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense (Dense)               (None, 80)                400       
+                                                                 
+ dense_1 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_2 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_3 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_4 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_5 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_6 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_7 (Dense)             (None, 80)                6480      
+                                                                 
+ dense_8 (Dense)             (None, 3)                 243       
+                                                                 
+=================================================================
+Total params: 46,003
+Trainable params: 46,003
+Non-trainable params: 0
+_________________________________________________________________
+{'xi_kind': 'param', 'depth': 8, 'width': 80, 'activation': 'elu', 'subsample_size': 80000, 'batch_size': 32}
+----------------------
+err_loo: 1.0001569265336363
+err_mae: 0.0010968857339896977
+err_mse: 0.009036499582161767
+----------------------
+Data size (7577600, 10)
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_9 (Dense)             (None, 90)                450       
+                                                                 
+ dense_10 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_11 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_12 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_13 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_14 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_15 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_16 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_17 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_18 (Dense)            (None, 3)                 273       
+                                                                 
+=================================================================
+Total params: 66,243
+Trainable params: 66,243
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2500/2500 - 5s - loss: 0.0042 - loo: 0.2714 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 2/200
+2500/2500 - 4s - loss: 0.0023 - loo: 0.2237 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 3/200
+2500/2500 - 4s - loss: 0.0020 - loo: 0.2182 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 4/200
+2500/2500 - 4s - loss: 0.0013 - loo: 0.1663 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 5/200
+2500/2500 - 5s - loss: 5.5011e-04 - loo: 0.1007 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 6/200
+2500/2500 - 4s - loss: 4.8989e-04 - loo: 0.0935 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 7/200
+2500/2500 - 4s - loss: 4.5915e-04 - loo: 0.0888 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 8/200
+2500/2500 - 4s - loss: 4.3297e-04 - loo: 0.0843 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 9/200
+2500/2500 - 5s - loss: 4.0525e-04 - loo: 0.0795 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 10/200
+2500/2500 - 4s - loss: 3.9192e-04 - loo: 0.0773 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 11/200
+2500/2500 - 4s - loss: 3.7415e-04 - loo: 0.0738 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 12/200
+2500/2500 - 4s - loss: 3.5893e-04 - loo: 0.0717 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 13/200
+2500/2500 - 4s - loss: 3.6057e-04 - loo: 0.0719 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 14/200
+2500/2500 - 4s - loss: 3.5095e-04 - loo: 0.0701 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 15/200
+2500/2500 - 5s - loss: 3.3983e-04 - loo: 0.0682 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 16/200
+2500/2500 - 4s - loss: 3.5941e-04 - loo: 0.0692 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 17/200
+2500/2500 - 4s - loss: 3.3515e-04 - loo: 0.0671 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 18/200
+2500/2500 - 4s - loss: 3.3528e-04 - loo: 0.0668 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 19/200
+2500/2500 - 4s - loss: 3.2898e-04 - loo: 0.0668 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 20/200
+2500/2500 - 4s - loss: 3.2187e-04 - loo: 0.0664 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 21/200
+2500/2500 - 4s - loss: 3.1858e-04 - loo: 0.0627 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 22/200
+2500/2500 - 4s - loss: 3.2852e-04 - loo: 0.0638 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 23/200
+2500/2500 - 4s - loss: 3.3256e-04 - loo: 0.0640 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 24/200
+2500/2500 - 4s - loss: 3.1404e-04 - loo: 0.0618 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 25/200
+2500/2500 - 4s - loss: 3.1819e-04 - loo: 0.0641 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 26/200
+2500/2500 - 4s - loss: 3.2000e-04 - loo: 0.0630 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 27/200
+2500/2500 - 4s - loss: 3.1153e-04 - loo: 0.0618 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 28/200
+2500/2500 - 4s - loss: 3.0815e-04 - loo: 0.0593 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 29/200
+2500/2500 - 4s - loss: 3.0523e-04 - loo: 0.0599 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 30/200
+2500/2500 - 4s - loss: 3.0549e-04 - loo: 0.0587 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 31/200
+2500/2500 - 5s - loss: 3.0631e-04 - loo: 0.0594 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 32/200
+2500/2500 - 4s - loss: 3.1543e-04 - loo: 0.0613 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 33/200
+2500/2500 - 4s - loss: 3.0498e-04 - loo: 0.0593 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 34/200
+2500/2500 - 4s - loss: 2.9318e-04 - loo: 0.0579 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 35/200
+2500/2500 - 4s - loss: 3.0276e-04 - loo: 0.0622 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 36/200
+2500/2500 - 4s - loss: 2.8837e-04 - loo: 0.0589 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 37/200
+2500/2500 - 4s - loss: 3.1717e-04 - loo: 0.0625 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 38/200
+2500/2500 - 5s - loss: 2.9930e-04 - loo: 0.0564 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 39/200
+2500/2500 - 4s - loss: 2.9447e-04 - loo: 0.0563 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 40/200
+2500/2500 - 5s - loss: 2.9655e-04 - loo: 0.0577 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 41/200
+2500/2500 - 4s - loss: 2.9424e-04 - loo: 0.0578 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 42/200
+2500/2500 - 4s - loss: 2.8893e-04 - loo: 0.0578 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 43/200
+2500/2500 - 4s - loss: 2.9087e-04 - loo: 0.0590 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 44/200
+2500/2500 - 4s - loss: 2.9949e-04 - loo: 0.0616 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 45/200
+2500/2500 - 4s - loss: 2.8277e-04 - loo: 0.0543 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 46/200
+2500/2500 - 4s - loss: 2.9471e-04 - loo: 0.0550 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 47/200
+2500/2500 - 4s - loss: 3.7598e-04 - loo: 0.0644 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 48/200
+2500/2500 - 4s - loss: 2.8968e-04 - loo: 0.0557 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 49/200
+2500/2500 - 4s - loss: 2.9425e-04 - loo: 0.0565 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 50/200
+2500/2500 - 4s - loss: 2.9368e-04 - loo: 0.0595 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 51/200
+2500/2500 - 4s - loss: 2.8952e-04 - loo: 0.0589 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 52/200
+2500/2500 - 4s - loss: 2.8652e-04 - loo: 0.0560 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 53/200
+2500/2500 - 4s - loss: 2.9603e-04 - loo: 0.0581 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 54/200
+2500/2500 - 4s - loss: 2.9926e-04 - loo: 0.0574 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 55/200
+2500/2500 - 4s - loss: 2.8484e-04 - loo: 0.0545 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 56/200
+2500/2500 - 4s - loss: 2.6555e-04 - loo: 0.0437 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 57/200
+2500/2500 - 4s - loss: 2.6474e-04 - loo: 0.0497 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 58/200
+2500/2500 - 4s - loss: 2.5604e-04 - loo: 0.0524 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 59/200
+2500/2500 - 4s - loss: 2.4582e-04 - loo: 0.0533 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 60/200
+2500/2500 - 4s - loss: 2.4807e-04 - loo: 0.0530 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 61/200
+2500/2500 - 4s - loss: 2.5221e-04 - loo: 0.0476 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 62/200
+2500/2500 - 4s - loss: 2.4440e-04 - loo: 0.0530 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 63/200
+2500/2500 - 4s - loss: 2.4803e-04 - loo: 0.0503 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 64/200
+2500/2500 - 4s - loss: 2.4887e-04 - loo: 0.0533 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 65/200
+2500/2500 - 5s - loss: 2.3535e-04 - loo: 0.0511 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 66/200
+2500/2500 - 4s - loss: 2.4601e-04 - loo: 0.0542 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 67/200
+2500/2500 - 4s - loss: 2.3965e-04 - loo: 0.0512 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 68/200
+2500/2500 - 4s - loss: 2.3679e-04 - loo: 0.0504 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 69/200
+2500/2500 - 4s - loss: 2.3818e-04 - loo: 0.0498 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 70/200
+2500/2500 - 4s - loss: 2.4868e-04 - loo: 0.0523 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 71/200
+2500/2500 - 4s - loss: 2.3892e-04 - loo: 0.0511 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 72/200
+2500/2500 - 4s - loss: 2.4966e-04 - loo: 0.0445 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 73/200
+2500/2500 - 4s - loss: 2.5756e-04 - loo: 0.0463 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 74/200
+2500/2500 - 4s - loss: 2.6593e-04 - loo: 0.0455 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 75/200
+2500/2500 - 4s - loss: 2.6258e-04 - loo: 0.0493 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 76/200
+2500/2500 - 4s - loss: 2.1110e-04 - loo: 0.0473 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 77/200
+2500/2500 - 4s - loss: 1.8418e-04 - loo: 0.0463 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 78/200
+2500/2500 - 4s - loss: 1.7690e-04 - loo: 0.0425 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 79/200
+2500/2500 - 4s - loss: 2.0865e-04 - loo: 0.0453 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 80/200
+2500/2500 - 4s - loss: 2.0940e-04 - loo: 0.0399 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 81/200
+2500/2500 - 4s - loss: 2.3455e-04 - loo: 0.0446 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 82/200
+2500/2500 - 4s - loss: 1.6172e-04 - loo: 0.0407 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 83/200
+2500/2500 - 4s - loss: 1.6988e-04 - loo: 0.0439 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 84/200
+2500/2500 - 4s - loss: 1.6322e-04 - loo: 0.0401 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 85/200
+2500/2500 - 4s - loss: 1.9604e-04 - loo: 0.0440 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 86/200
+2500/2500 - 4s - loss: 1.7056e-04 - loo: 0.0422 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 87/200
+2500/2500 - 4s - loss: 2.2028e-04 - loo: 0.0448 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 88/200
+2500/2500 - 4s - loss: 2.3955e-04 - loo: 0.0427 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 89/200
+2500/2500 - 4s - loss: 2.1656e-04 - loo: 0.0444 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 90/200
+2500/2500 - 4s - loss: 2.0980e-04 - loo: 0.0442 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 91/200
+2500/2500 - 4s - loss: 1.8422e-04 - loo: 0.0444 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 92/200
+2500/2500 - 4s - loss: 1.9432e-04 - loo: 0.0413 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 93/200
+2500/2500 - 4s - loss: 1.3604e-04 - loo: 0.0347 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 94/200
+2500/2500 - 4s - loss: 1.1148e-04 - loo: 0.0325 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 95/200
+2500/2500 - 4s - loss: 1.2497e-04 - loo: 0.0315 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 96/200
+2500/2500 - 4s - loss: 9.2470e-05 - loo: 0.0288 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 97/200
+2500/2500 - 4s - loss: 1.0795e-04 - loo: 0.0313 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 98/200
+2500/2500 - 4s - loss: 9.1396e-05 - loo: 0.0280 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 99/200
+2500/2500 - 4s - loss: 1.0386e-04 - loo: 0.0270 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 100/200
+2500/2500 - 4s - loss: 1.1334e-04 - loo: 0.0298 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 101/200
+2500/2500 - 4s - loss: 1.3080e-04 - loo: 0.0331 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 102/200
+2500/2500 - 4s - loss: 9.4702e-05 - loo: 0.0275 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 103/200
+2500/2500 - 4s - loss: 1.1317e-04 - loo: 0.0317 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 104/200
+2500/2500 - 4s - loss: 1.3268e-04 - loo: 0.0313 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 105/200
+2500/2500 - 4s - loss: 9.3562e-05 - loo: 0.0290 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 106/200
+2500/2500 - 4s - loss: 1.1575e-04 - loo: 0.0278 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 107/200
+2500/2500 - 4s - loss: 1.1396e-04 - loo: 0.0309 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 108/200
+2500/2500 - 4s - loss: 1.2651e-04 - loo: 0.0338 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 109/200
+2500/2500 - 4s - loss: 3.4111e-05 - loo: 0.0161 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 110/200
+2500/2500 - 4s - loss: 5.6860e-05 - loo: 0.0193 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 111/200
+2500/2500 - 4s - loss: 3.1761e-05 - loo: 0.0147 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 112/200
+2500/2500 - 4s - loss: 3.9730e-05 - loo: 0.0156 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 113/200
+2500/2500 - 4s - loss: 6.4867e-05 - loo: 0.0197 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 114/200
+2500/2500 - 4s - loss: 7.4708e-05 - loo: 0.0222 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 115/200
+2500/2500 - 4s - loss: 3.1560e-05 - loo: 0.0145 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 116/200
+2500/2500 - 4s - loss: 4.8074e-05 - loo: 0.0170 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 117/200
+2500/2500 - 4s - loss: 3.1038e-05 - loo: 0.0140 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 118/200
+2500/2500 - 4s - loss: 3.0659e-05 - loo: 0.0137 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 119/200
+2500/2500 - 4s - loss: 6.0190e-05 - loo: 0.0176 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 120/200
+2500/2500 - 4s - loss: 8.3581e-05 - loo: 0.0210 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 121/200
+2500/2500 - 4s - loss: 3.2268e-05 - loo: 0.0151 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 122/200
+2500/2500 - 4s - loss: 3.7130e-05 - loo: 0.0152 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 123/200
+2500/2500 - 5s - loss: 4.7829e-05 - loo: 0.0176 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 124/200
+2500/2500 - 5s - loss: 3.0754e-05 - loo: 0.0138 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 125/200
+2500/2500 - 4s - loss: 3.0389e-05 - loo: 0.0136 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 126/200
+2500/2500 - 4s - loss: 5.2071e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 127/200
+2500/2500 - 4s - loss: 6.2056e-05 - loo: 0.0205 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 128/200
+2500/2500 - 4s - loss: 5.5858e-05 - loo: 0.0173 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 129/200
+2500/2500 - 4s - loss: 3.9800e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 130/200
+2500/2500 - 4s - loss: 3.2993e-05 - loo: 0.0145 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 131/200
+2500/2500 - 4s - loss: 1.1580e-04 - loo: 0.0247 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 132/200
+2500/2500 - 4s - loss: 3.3073e-05 - loo: 0.0156 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 133/200
+2500/2500 - 4s - loss: 4.7538e-05 - loo: 0.0167 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 134/200
+2500/2500 - 4s - loss: 6.7065e-05 - loo: 0.0194 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 135/200
+2500/2500 - 4s - loss: 3.6150e-05 - loo: 0.0155 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 136/200
+2500/2500 - 4s - loss: 2.9943e-05 - loo: 0.0136 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 137/200
+2500/2500 - 4s - loss: 2.9747e-05 - loo: 0.0135 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 138/200
+2500/2500 - 4s - loss: 3.1804e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 139/200
+2500/2500 - 4s - loss: 2.9522e-05 - loo: 0.0133 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 140/200
+2500/2500 - 5s - loss: 2.9603e-05 - loo: 0.0135 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 141/200
+2500/2500 - 4s - loss: 2.9864e-05 - loo: 0.0138 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 142/200
+2500/2500 - 4s - loss: 2.9567e-05 - loo: 0.0136 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 143/200
+2500/2500 - 4s - loss: 3.2867e-05 - loo: 0.0143 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 144/200
+2500/2500 - 4s - loss: 2.9393e-05 - loo: 0.0135 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 145/200
+2500/2500 - 4s - loss: 2.9323e-05 - loo: 0.0135 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 146/200
+2500/2500 - 4s - loss: 3.1234e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 147/200
+2500/2500 - 4s - loss: 2.9490e-05 - loo: 0.0137 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 148/200
+2500/2500 - 4s - loss: 2.9207e-05 - loo: 0.0136 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 149/200
+2500/2500 - 4s - loss: 3.0450e-05 - loo: 0.0144 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 150/200
+2500/2500 - 4s - loss: 3.1192e-05 - loo: 0.0143 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 151/200
+2500/2500 - 4s - loss: 2.9050e-05 - loo: 0.0136 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 152/200
+2500/2500 - 4s - loss: 2.9192e-05 - loo: 0.0138 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 153/200
+2500/2500 - 4s - loss: 3.2852e-05 - loo: 0.0148 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 154/200
+2500/2500 - 4s - loss: 2.8940e-05 - loo: 0.0137 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 155/200
+2500/2500 - 4s - loss: 2.9023e-05 - loo: 0.0138 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 156/200
+2500/2500 - 4s - loss: 2.9106e-05 - loo: 0.0140 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 157/200
+2500/2500 - 4s - loss: 2.9212e-05 - loo: 0.0141 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 158/200
+2500/2500 - 4s - loss: 3.1715e-05 - loo: 0.0148 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 159/200
+2500/2500 - 4s - loss: 2.8770e-05 - loo: 0.0138 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 160/200
+2500/2500 - 4s - loss: 2.8900e-05 - loo: 0.0140 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 161/200
+2500/2500 - 4s - loss: 2.9062e-05 - loo: 0.0142 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 162/200
+2500/2500 - 4s - loss: 2.9405e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 163/200
+2500/2500 - 4s - loss: 3.3690e-05 - loo: 0.0157 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 164/200
+2500/2500 - 4s - loss: 2.8575e-05 - loo: 0.0140 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 165/200
+2500/2500 - 4s - loss: 2.8585e-05 - loo: 0.0140 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 166/200
+2500/2500 - 4s - loss: 2.8854e-05 - loo: 0.0143 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 167/200
+2500/2500 - 4s - loss: 2.8878e-05 - loo: 0.0144 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 168/200
+2500/2500 - 4s - loss: 2.8778e-05 - loo: 0.0143 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 169/200
+2500/2500 - 4s - loss: 2.8789e-05 - loo: 0.0144 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 170/200
+2500/2500 - 5s - loss: 2.9136e-05 - loo: 0.0147 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 171/200
+2500/2500 - 4s - loss: 2.8484e-05 - loo: 0.0142 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 172/200
+2500/2500 - 4s - loss: 2.8617e-05 - loo: 0.0144 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 173/200
+2500/2500 - 4s - loss: 2.8626e-05 - loo: 0.0144 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 174/200
+2500/2500 - 5s - loss: 2.8732e-05 - loo: 0.0146 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 175/200
+2500/2500 - 4s - loss: 2.8565e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 176/200
+2500/2500 - 4s - loss: 3.0215e-05 - loo: 0.0151 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 177/200
+2500/2500 - 4s - loss: 2.8221e-05 - loo: 0.0144 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 178/200
+2500/2500 - 4s - loss: 2.8349e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 179/200
+2500/2500 - 4s - loss: 2.8430e-05 - loo: 0.0146 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 180/200
+2500/2500 - 4s - loss: 3.0522e-05 - loo: 0.0153 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 181/200
+2500/2500 - 4s - loss: 2.8037e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 182/200
+2500/2500 - 4s - loss: 2.8086e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 183/200
+2500/2500 - 4s - loss: 2.8261e-05 - loo: 0.0147 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 184/200
+2500/2500 - 4s - loss: 2.8203e-05 - loo: 0.0147 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 185/200
+2500/2500 - 4s - loss: 2.8207e-05 - loo: 0.0148 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 186/200
+2500/2500 - 5s - loss: 2.8262e-05 - loo: 0.0149 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 187/200
+2500/2500 - 5s - loss: 2.8220e-05 - loo: 0.0149 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 188/200
+2500/2500 - 4s - loss: 2.8132e-05 - loo: 0.0149 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 189/200
+2500/2500 - 4s - loss: 2.8027e-05 - loo: 0.0148 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 190/200
+2500/2500 - 4s - loss: 3.0466e-05 - loo: 0.0153 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 191/200
+2500/2500 - 4s - loss: 2.7447e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 192/200
+2500/2500 - 4s - loss: 2.7655e-05 - loo: 0.0146 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 193/200
+2500/2500 - 4s - loss: 2.7994e-05 - loo: 0.0150 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 194/200
+2500/2500 - 4s - loss: 3.1621e-05 - loo: 0.0155 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 195/200
+2500/2500 - 4s - loss: 2.7321e-05 - loo: 0.0145 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 196/200
+2500/2500 - 4s - loss: 2.7560e-05 - loo: 0.0147 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 197/200
+2500/2500 - 4s - loss: 2.7673e-05 - loo: 0.0148 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 198/200
+2500/2500 - 4s - loss: 2.7668e-05 - loo: 0.0149 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 199/200
+2500/2500 - 4s - loss: 2.7800e-05 - loo: 0.0151 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 200/200
+2500/2500 - 4s - loss: 2.7548e-05 - loo: 0.0148 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Total training time: 875.769216299057 [s]
+236800/236800 - 294s - 294s/epoch - 1ms/step
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_9 (Dense)             (None, 90)                450       
+                                                                 
+ dense_10 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_11 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_12 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_13 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_14 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_15 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_16 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_17 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_18 (Dense)            (None, 3)                 273       
+                                                                 
+=================================================================
+Total params: 66,243
+Trainable params: 66,243
+Non-trainable params: 0
+_________________________________________________________________
+{'xi_kind': 'param', 'depth': 9, 'width': 90, 'activation': 'elu', 'subsample_size': 80000, 'batch_size': 32}
+----------------------
+err_loo: 1.0000061389960444
+err_mae: 0.0012066066537737366
+err_mse: 0.00635639315819369
+----------------------
+Data size (7577600, 10)
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_19 (Dense)            (None, 100)               500       
+                                                                 
+ dense_20 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_21 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_22 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_23 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_24 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_25 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_26 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_27 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_28 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_29 (Dense)            (None, 3)                 303       
+                                                                 
+=================================================================
+Total params: 91,703
+Trainable params: 91,703
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2500/2500 - 5s - loss: 0.0046 - loo: 0.2682 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 2/200
+2500/2500 - 5s - loss: 0.0023 - loo: 0.2229 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 3/200
+2500/2500 - 5s - loss: 0.0020 - loo: 0.2160 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 4/200
+2500/2500 - 5s - loss: 0.0012 - loo: 0.1621 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 5/200
+2500/2500 - 5s - loss: 5.6379e-04 - loo: 0.1043 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 6/200
+2500/2500 - 5s - loss: 4.8354e-04 - loo: 0.0942 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 7/200
+2500/2500 - 5s - loss: 4.4873e-04 - loo: 0.0888 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 8/200
+2500/2500 - 5s - loss: 4.3282e-04 - loo: 0.0861 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 9/200
+2500/2500 - 5s - loss: 3.8223e-04 - loo: 0.0787 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 10/200
+2500/2500 - 5s - loss: 3.7038e-04 - loo: 0.0768 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 11/200
+2500/2500 - 5s - loss: 3.4353e-04 - loo: 0.0728 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 12/200
+2500/2500 - 5s - loss: 3.2685e-04 - loo: 0.0699 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 13/200
+2500/2500 - 5s - loss: 3.2513e-04 - loo: 0.0676 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 14/200
+2500/2500 - 5s - loss: 3.2821e-04 - loo: 0.0682 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 15/200
+2500/2500 - 5s - loss: 3.2227e-04 - loo: 0.0669 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 16/200
+2500/2500 - 5s - loss: 3.1371e-04 - loo: 0.0663 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 17/200
+2500/2500 - 5s - loss: 3.0621e-04 - loo: 0.0640 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 18/200
+2500/2500 - 5s - loss: 3.1152e-04 - loo: 0.0651 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 19/200
+2500/2500 - 5s - loss: 2.9905e-04 - loo: 0.0628 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 20/200
+2500/2500 - 5s - loss: 2.9324e-04 - loo: 0.0610 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 21/200
+2500/2500 - 5s - loss: 2.8512e-04 - loo: 0.0591 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 22/200
+2500/2500 - 5s - loss: 3.1748e-04 - loo: 0.0631 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 23/200
+2500/2500 - 5s - loss: 2.9179e-04 - loo: 0.0610 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 24/200
+2500/2500 - 5s - loss: 2.8426e-04 - loo: 0.0597 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 25/200
+2500/2500 - 5s - loss: 4.7444e-04 - loo: 0.0698 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 26/200
+2500/2500 - 5s - loss: 2.9413e-04 - loo: 0.0609 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 27/200
+2500/2500 - 5s - loss: 2.8884e-04 - loo: 0.0596 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 28/200
+2500/2500 - 5s - loss: 2.8493e-04 - loo: 0.0577 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 29/200
+2500/2500 - 5s - loss: 2.8576e-04 - loo: 0.0597 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 30/200
+2500/2500 - 5s - loss: 2.8578e-04 - loo: 0.0597 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 31/200
+2500/2500 - 5s - loss: 2.7592e-04 - loo: 0.0565 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 32/200
+2500/2500 - 5s - loss: 2.7591e-04 - loo: 0.0578 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 33/200
+2500/2500 - 5s - loss: 2.7168e-04 - loo: 0.0549 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 34/200
+2500/2500 - 5s - loss: 2.6895e-04 - loo: 0.0566 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 35/200
+2500/2500 - 5s - loss: 2.6965e-04 - loo: 0.0546 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 36/200
+2500/2500 - 5s - loss: 2.7253e-04 - loo: 0.0545 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 37/200
+2500/2500 - 5s - loss: 2.6749e-04 - loo: 0.0531 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 38/200
+2500/2500 - 5s - loss: 2.6704e-04 - loo: 0.0547 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 39/200
+2500/2500 - 5s - loss: 2.6320e-04 - loo: 0.0528 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 40/200
+2500/2500 - 5s - loss: 2.6802e-04 - loo: 0.0538 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 41/200
+2500/2500 - 5s - loss: 2.6116e-04 - loo: 0.0516 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 42/200
+2500/2500 - 5s - loss: 2.7059e-04 - loo: 0.0542 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 43/200
+2500/2500 - 5s - loss: 2.6225e-04 - loo: 0.0519 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 44/200
+2500/2500 - 5s - loss: 2.6990e-04 - loo: 0.0556 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 45/200
+2500/2500 - 5s - loss: 2.5984e-04 - loo: 0.0521 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 46/200
+2500/2500 - 5s - loss: 2.5926e-04 - loo: 0.0517 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 47/200
+2500/2500 - 5s - loss: 3.1762e-04 - loo: 0.0599 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 48/200
+2500/2500 - 5s - loss: 2.6075e-04 - loo: 0.0524 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 49/200
+2500/2500 - 5s - loss: 2.5727e-04 - loo: 0.0520 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 50/200
+2500/2500 - 5s - loss: 2.6958e-04 - loo: 0.0541 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 51/200
+2500/2500 - 5s - loss: 2.6038e-04 - loo: 0.0525 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 52/200
+2500/2500 - 5s - loss: 2.5818e-04 - loo: 0.0515 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 53/200
+2500/2500 - 5s - loss: 2.6409e-04 - loo: 0.0547 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 54/200
+2500/2500 - 5s - loss: 3.5625e-04 - loo: 0.0672 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 55/200
+2500/2500 - 5s - loss: 2.7135e-04 - loo: 0.0561 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 56/200
+2500/2500 - 5s - loss: 2.6783e-04 - loo: 0.0554 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 57/200
+2500/2500 - 5s - loss: 2.6731e-04 - loo: 0.0554 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 58/200
+2500/2500 - 5s - loss: 2.6274e-04 - loo: 0.0522 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 59/200
+2500/2500 - 5s - loss: 2.6118e-04 - loo: 0.0539 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 60/200
+2500/2500 - 5s - loss: 2.1939e-04 - loo: 0.0483 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 61/200
+2500/2500 - 5s - loss: 2.2338e-04 - loo: 0.0455 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 62/200
+2500/2500 - 5s - loss: 2.0765e-04 - loo: 0.0466 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 63/200
+2500/2500 - 5s - loss: 2.2335e-04 - loo: 0.0418 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 64/200
+2500/2500 - 5s - loss: 2.3138e-04 - loo: 0.0406 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 65/200
+2500/2500 - 5s - loss: 2.1412e-04 - loo: 0.0472 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 66/200
+2500/2500 - 5s - loss: 2.3037e-04 - loo: 0.0386 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 67/200
+2500/2500 - 5s - loss: 2.2019e-04 - loo: 0.0486 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 68/200
+2500/2500 - 5s - loss: 2.0429e-04 - loo: 0.0470 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 69/200
+2500/2500 - 5s - loss: 2.1701e-04 - loo: 0.0448 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 70/200
+2500/2500 - 5s - loss: 2.1338e-04 - loo: 0.0426 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 71/200
+2500/2500 - 5s - loss: 2.1473e-04 - loo: 0.0445 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 72/200
+2500/2500 - 5s - loss: 2.1204e-04 - loo: 0.0470 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 73/200
+2500/2500 - 5s - loss: 2.0144e-04 - loo: 0.0464 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 74/200
+2500/2500 - 5s - loss: 1.9251e-04 - loo: 0.0469 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 75/200
+2500/2500 - 5s - loss: 1.8801e-04 - loo: 0.0431 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 76/200
+2500/2500 - 5s - loss: 2.2813e-04 - loo: 0.0392 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 77/200
+2500/2500 - 5s - loss: 2.1831e-04 - loo: 0.0419 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 78/200
+2500/2500 - 5s - loss: 2.1184e-04 - loo: 0.0479 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 79/200
+2500/2500 - 5s - loss: 1.9500e-04 - loo: 0.0430 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 80/200
+2500/2500 - 5s - loss: 2.2201e-04 - loo: 0.0424 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 81/200
+2500/2500 - 5s - loss: 1.9689e-04 - loo: 0.0432 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 82/200
+2500/2500 - 5s - loss: 3.8261e-04 - loo: 0.0709 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 83/200
+2500/2500 - 5s - loss: 2.3822e-04 - loo: 0.0433 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 84/200
+2500/2500 - 5s - loss: 2.3518e-04 - loo: 0.0415 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 85/200
+2500/2500 - 5s - loss: 2.3724e-04 - loo: 0.0423 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 86/200
+2500/2500 - 5s - loss: 2.1490e-04 - loo: 0.0414 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 87/200
+2500/2500 - 5s - loss: 1.5968e-04 - loo: 0.0408 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 88/200
+2500/2500 - 5s - loss: 1.4143e-04 - loo: 0.0376 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 89/200
+2500/2500 - 5s - loss: 1.3202e-04 - loo: 0.0365 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 90/200
+2500/2500 - 5s - loss: 1.2982e-04 - loo: 0.0345 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 91/200
+2500/2500 - 5s - loss: 1.3848e-04 - loo: 0.0353 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 92/200
+2500/2500 - 5s - loss: 1.3851e-04 - loo: 0.0358 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 93/200
+2500/2500 - 5s - loss: 1.1453e-04 - loo: 0.0337 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 94/200
+2500/2500 - 5s - loss: 1.3453e-04 - loo: 0.0337 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 95/200
+2500/2500 - 5s - loss: 1.0921e-04 - loo: 0.0328 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 96/200
+2500/2500 - 5s - loss: 1.0612e-04 - loo: 0.0326 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 97/200
+2500/2500 - 5s - loss: 9.1506e-05 - loo: 0.0293 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 98/200
+2500/2500 - 5s - loss: 1.5963e-04 - loo: 0.0361 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 99/200
+2500/2500 - 5s - loss: 1.4006e-04 - loo: 0.0356 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 100/200
+2500/2500 - 5s - loss: 1.2672e-04 - loo: 0.0333 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 101/200
+2500/2500 - 5s - loss: 1.1814e-04 - loo: 0.0342 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 102/200
+2500/2500 - 5s - loss: 1.1436e-04 - loo: 0.0334 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 103/200
+2500/2500 - 5s - loss: 1.6371e-04 - loo: 0.0337 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 104/200
+2500/2500 - 5s - loss: 2.1401e-04 - loo: 0.0356 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 105/200
+2500/2500 - 5s - loss: 1.7328e-04 - loo: 0.0378 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 106/200
+2500/2500 - 5s - loss: 2.0166e-04 - loo: 0.0374 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 107/200
+2500/2500 - 5s - loss: 1.6813e-04 - loo: 0.0387 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 108/200
+2500/2500 - 5s - loss: 8.7118e-05 - loo: 0.0280 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 109/200
+2500/2500 - 5s - loss: 5.5111e-05 - loo: 0.0218 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 110/200
+2500/2500 - 5s - loss: 5.7175e-05 - loo: 0.0206 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 111/200
+2500/2500 - 5s - loss: 8.2413e-05 - loo: 0.0227 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 112/200
+2500/2500 - 5s - loss: 8.1238e-05 - loo: 0.0248 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 113/200
+2500/2500 - 5s - loss: 9.8333e-05 - loo: 0.0240 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 114/200
+2500/2500 - 5s - loss: 6.4918e-05 - loo: 0.0198 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 115/200
+2500/2500 - 5s - loss: 1.0093e-04 - loo: 0.0261 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 116/200
+2500/2500 - 5s - loss: 1.0323e-04 - loo: 0.0243 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 117/200
+2500/2500 - 5s - loss: 7.3665e-05 - loo: 0.0214 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 118/200
+2500/2500 - 5s - loss: 8.1809e-05 - loo: 0.0248 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 119/200
+2500/2500 - 5s - loss: 9.5075e-05 - loo: 0.0290 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 120/200
+2500/2500 - 5s - loss: 5.8180e-05 - loo: 0.0238 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 121/200
+2500/2500 - 5s - loss: 4.6600e-05 - loo: 0.0190 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 122/200
+2500/2500 - 5s - loss: 3.9393e-05 - loo: 0.0175 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 123/200
+2500/2500 - 5s - loss: 3.7407e-05 - loo: 0.0165 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 124/200
+2500/2500 - 5s - loss: 3.8513e-05 - loo: 0.0166 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 125/200
+2500/2500 - 5s - loss: 3.3695e-05 - loo: 0.0153 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 126/200
+2500/2500 - 5s - loss: 4.0096e-05 - loo: 0.0163 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 127/200
+2500/2500 - 5s - loss: 2.8001e-05 - loo: 0.0134 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 128/200
+2500/2500 - 5s - loss: 3.7186e-05 - loo: 0.0155 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 129/200
+2500/2500 - 5s - loss: 2.7705e-05 - loo: 0.0132 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 130/200
+2500/2500 - 5s - loss: 6.6950e-05 - loo: 0.0177 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 131/200
+2500/2500 - 5s - loss: 2.7397e-05 - loo: 0.0132 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 132/200
+2500/2500 - 5s - loss: 4.1474e-05 - loo: 0.0160 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 133/200
+2500/2500 - 5s - loss: 2.6713e-05 - loo: 0.0125 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 134/200
+2500/2500 - 5s - loss: 4.6564e-05 - loo: 0.0170 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 135/200
+2500/2500 - 5s - loss: 2.6550e-05 - loo: 0.0123 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 136/200
+2500/2500 - 5s - loss: 2.6583e-05 - loo: 0.0124 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 137/200
+2500/2500 - 5s - loss: 3.3217e-05 - loo: 0.0146 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 138/200
+2500/2500 - 5s - loss: 3.8620e-05 - loo: 0.0151 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 139/200
+2500/2500 - 5s - loss: 2.6233e-05 - loo: 0.0120 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 140/200
+2500/2500 - 5s - loss: 2.6430e-05 - loo: 0.0122 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 141/200
+2500/2500 - 5s - loss: 5.4382e-05 - loo: 0.0160 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 142/200
+2500/2500 - 5s - loss: 2.7509e-05 - loo: 0.0127 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 143/200
+2500/2500 - 5s - loss: 5.8820e-05 - loo: 0.0169 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 144/200
+2500/2500 - 5s - loss: 3.1094e-05 - loo: 0.0135 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 145/200
+2500/2500 - 5s - loss: 2.6131e-05 - loo: 0.0120 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 146/200
+2500/2500 - 5s - loss: 3.2545e-05 - loo: 0.0133 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 147/200
+2500/2500 - 5s - loss: 3.5474e-05 - loo: 0.0135 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 148/200
+2500/2500 - 5s - loss: 2.6162e-05 - loo: 0.0120 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 149/200
+2500/2500 - 5s - loss: 3.5325e-05 - loo: 0.0139 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 150/200
+2500/2500 - 5s - loss: 2.5831e-05 - loo: 0.0117 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 151/200
+2500/2500 - 5s - loss: 2.5968e-05 - loo: 0.0119 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 152/200
+2500/2500 - 5s - loss: 5.4048e-05 - loo: 0.0164 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 153/200
+2500/2500 - 5s - loss: 2.5888e-05 - loo: 0.0119 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 154/200
+2500/2500 - 5s - loss: 5.9126e-05 - loo: 0.0179 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 155/200
+2500/2500 - 5s - loss: 5.9394e-05 - loo: 0.0164 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 156/200
+2500/2500 - 5s - loss: 2.5873e-05 - loo: 0.0119 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 157/200
+2500/2500 - 5s - loss: 2.5971e-05 - loo: 0.0121 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 158/200
+2500/2500 - 5s - loss: 3.9804e-05 - loo: 0.0145 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 159/200
+2500/2500 - 5s - loss: 2.5740e-05 - loo: 0.0118 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 160/200
+2500/2500 - 5s - loss: 5.2485e-05 - loo: 0.0165 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 161/200
+2500/2500 - 5s - loss: 2.5658e-05 - loo: 0.0117 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 162/200
+2500/2500 - 5s - loss: 2.5728e-05 - loo: 0.0119 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 163/200
+2500/2500 - 5s - loss: 6.7319e-05 - loo: 0.0209 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 164/200
+2500/2500 - 5s - loss: 4.3836e-05 - loo: 0.0174 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 165/200
+2500/2500 - 5s - loss: 2.6804e-05 - loo: 0.0126 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 166/200
+2500/2500 - 5s - loss: 5.6014e-05 - loo: 0.0158 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 167/200
+2500/2500 - 5s - loss: 4.9809e-05 - loo: 0.0166 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 168/200
+2500/2500 - 5s - loss: 2.6088e-05 - loo: 0.0123 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 169/200
+2500/2500 - 5s - loss: 8.7209e-05 - loo: 0.0234 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 170/200
+2500/2500 - 5s - loss: 4.7604e-05 - loo: 0.0188 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 171/200
+2500/2500 - 5s - loss: 3.8642e-05 - loo: 0.0167 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 172/200
+2500/2500 - 5s - loss: 2.9366e-05 - loo: 0.0141 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 173/200
+2500/2500 - 5s - loss: 2.8600e-05 - loo: 0.0140 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 174/200
+2500/2500 - 5s - loss: 2.8088e-05 - loo: 0.0137 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 175/200
+2500/2500 - 5s - loss: 2.7848e-05 - loo: 0.0135 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 176/200
+2500/2500 - 5s - loss: 2.7138e-05 - loo: 0.0133 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 177/200
+2500/2500 - 5s - loss: 2.7331e-05 - loo: 0.0132 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 178/200
+2500/2500 - 5s - loss: 2.6490e-05 - loo: 0.0128 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 179/200
+2500/2500 - 5s - loss: 2.6125e-05 - loo: 0.0126 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 180/200
+2500/2500 - 5s - loss: 2.6944e-05 - loo: 0.0130 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 181/200
+2500/2500 - 5s - loss: 2.5991e-05 - loo: 0.0125 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 182/200
+2500/2500 - 5s - loss: 2.5328e-05 - loo: 0.0119 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 183/200
+2500/2500 - 5s - loss: 2.5347e-05 - loo: 0.0121 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 184/200
+2500/2500 - 5s - loss: 2.5285e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 185/200
+2500/2500 - 5s - loss: 2.5270e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 186/200
+2500/2500 - 5s - loss: 2.5247e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 187/200
+2500/2500 - 5s - loss: 2.5203e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 188/200
+2500/2500 - 5s - loss: 2.5177e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 189/200
+2500/2500 - 5s - loss: 2.5214e-05 - loo: 0.0121 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 190/200
+2500/2500 - 5s - loss: 2.5149e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 191/200
+2500/2500 - 5s - loss: 2.5099e-05 - loo: 0.0119 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 192/200
+2500/2500 - 5s - loss: 2.5100e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 193/200
+2500/2500 - 5s - loss: 2.5077e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 194/200
+2500/2500 - 5s - loss: 2.5073e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 195/200
+2500/2500 - 5s - loss: 2.5028e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 196/200
+2500/2500 - 5s - loss: 2.5027e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 197/200
+2500/2500 - 5s - loss: 2.5019e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 198/200
+2500/2500 - 5s - loss: 2.4986e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 199/200
+2500/2500 - 5s - loss: 2.4977e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Epoch 200/200
+2500/2500 - 5s - loss: 2.4972e-05 - loo: 0.0120 - lr: 1.5625e-05 - 5s/epoch - 2ms/step
+Total training time: 968.083019733429 [s]
+236800/236800 - 266s - 266s/epoch - 1ms/step
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_19 (Dense)            (None, 100)               500       
+                                                                 
+ dense_20 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_21 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_22 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_23 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_24 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_25 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_26 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_27 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_28 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_29 (Dense)            (None, 3)                 303       
+                                                                 
+=================================================================
+Total params: 91,703
+Trainable params: 91,703
+Non-trainable params: 0
+_________________________________________________________________
+{'xi_kind': 'param', 'depth': 10, 'width': 100, 'activation': 'elu', 'subsample_size': 80000, 'batch_size': 32}
+----------------------
+err_loo: 0.5950375165273946
+err_mae: 0.0008543303961287461
+err_mse: 0.0055194306314124645
+----------------------
+Data size (7577600, 10)
+Model: "model_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_30 (Dense)            (None, 80)                400       
+                                                                 
+ dense_31 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_32 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_33 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_34 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_35 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_36 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_37 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_38 (Dense)            (None, 3)                 243       
+                                                                 
+=================================================================
+Total params: 46,003
+Trainable params: 46,003
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2500/2500 - 4s - loss: 0.0036 - loo: 0.2521 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 2/200
+2500/2500 - 3s - loss: 0.0020 - loo: 0.2024 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 3/200
+2500/2500 - 4s - loss: 9.0806e-04 - loo: 0.1357 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 4/200
+2500/2500 - 3s - loss: 7.3744e-04 - loo: 0.1209 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 5/200
+2500/2500 - 4s - loss: 6.4377e-04 - loo: 0.1112 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 6/200
+2500/2500 - 3s - loss: 5.3839e-04 - loo: 0.0999 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 7/200
+2500/2500 - 4s - loss: 5.1129e-04 - loo: 0.0970 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 8/200
+2500/2500 - 4s - loss: 4.6137e-04 - loo: 0.0904 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 9/200
+2500/2500 - 3s - loss: 4.1180e-04 - loo: 0.0847 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 10/200
+2500/2500 - 3s - loss: 4.3807e-04 - loo: 0.0875 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 11/200
+2500/2500 - 3s - loss: 3.6716e-04 - loo: 0.0782 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 12/200
+2500/2500 - 4s - loss: 3.5608e-04 - loo: 0.0771 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 13/200
+2500/2500 - 3s - loss: 4.4711e-04 - loo: 0.0917 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 14/200
+2500/2500 - 3s - loss: 3.9796e-04 - loo: 0.0835 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 15/200
+2500/2500 - 4s - loss: 3.5389e-04 - loo: 0.0760 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 16/200
+2500/2500 - 4s - loss: 3.5897e-04 - loo: 0.0772 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 17/200
+2500/2500 - 4s - loss: 3.3294e-04 - loo: 0.0730 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 18/200
+2500/2500 - 4s - loss: 3.3585e-04 - loo: 0.0739 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 19/200
+2500/2500 - 4s - loss: 3.0989e-04 - loo: 0.0672 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 20/200
+2500/2500 - 4s - loss: 3.2098e-04 - loo: 0.0701 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 21/200
+2500/2500 - 4s - loss: 2.9949e-04 - loo: 0.0663 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 22/200
+2500/2500 - 4s - loss: 3.0032e-04 - loo: 0.0667 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 23/200
+2500/2500 - 4s - loss: 2.9475e-04 - loo: 0.0658 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 24/200
+2500/2500 - 3s - loss: 2.9512e-04 - loo: 0.0657 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 25/200
+2500/2500 - 3s - loss: 2.9401e-04 - loo: 0.0636 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 26/200
+2500/2500 - 3s - loss: 2.8220e-04 - loo: 0.0628 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 27/200
+2500/2500 - 3s - loss: 2.7956e-04 - loo: 0.0629 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 28/200
+2500/2500 - 3s - loss: 2.6998e-04 - loo: 0.0601 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 29/200
+2500/2500 - 3s - loss: 2.7719e-04 - loo: 0.0617 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 30/200
+2500/2500 - 3s - loss: 2.7559e-04 - loo: 0.0624 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 31/200
+2500/2500 - 3s - loss: 2.7811e-04 - loo: 0.0620 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 32/200
+2500/2500 - 3s - loss: 2.6814e-04 - loo: 0.0607 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 33/200
+2500/2500 - 3s - loss: 2.6052e-04 - loo: 0.0585 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 34/200
+2500/2500 - 3s - loss: 2.6947e-04 - loo: 0.0605 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 35/200
+2500/2500 - 4s - loss: 2.6002e-04 - loo: 0.0583 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 36/200
+2500/2500 - 4s - loss: 2.7141e-04 - loo: 0.0611 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 37/200
+2500/2500 - 3s - loss: 2.6693e-04 - loo: 0.0600 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 38/200
+2500/2500 - 3s - loss: 2.5478e-04 - loo: 0.0567 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 39/200
+2500/2500 - 3s - loss: 2.6925e-04 - loo: 0.0610 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 40/200
+2500/2500 - 4s - loss: 2.5886e-04 - loo: 0.0587 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 41/200
+2500/2500 - 4s - loss: 2.5870e-04 - loo: 0.0584 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 42/200
+2500/2500 - 4s - loss: 2.6381e-04 - loo: 0.0599 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 43/200
+2500/2500 - 4s - loss: 2.5699e-04 - loo: 0.0586 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 44/200
+2500/2500 - 4s - loss: 2.5322e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 45/200
+2500/2500 - 4s - loss: 2.6374e-04 - loo: 0.0601 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 46/200
+2500/2500 - 4s - loss: 2.5567e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 47/200
+2500/2500 - 4s - loss: 2.5488e-04 - loo: 0.0571 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 48/200
+2500/2500 - 4s - loss: 2.5886e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 49/200
+2500/2500 - 3s - loss: 2.5329e-04 - loo: 0.0554 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 50/200
+2500/2500 - 4s - loss: 2.4994e-04 - loo: 0.0556 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 51/200
+2500/2500 - 3s - loss: 2.4838e-04 - loo: 0.0557 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 52/200
+2500/2500 - 3s - loss: 2.4407e-04 - loo: 0.0551 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 53/200
+2500/2500 - 4s - loss: 2.6043e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 54/200
+2500/2500 - 4s - loss: 2.5803e-04 - loo: 0.0578 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 55/200
+2500/2500 - 4s - loss: 2.7630e-04 - loo: 0.0608 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 56/200
+2500/2500 - 3s - loss: 2.4732e-04 - loo: 0.0549 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 57/200
+2500/2500 - 3s - loss: 2.5260e-04 - loo: 0.0565 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 58/200
+2500/2500 - 3s - loss: 2.4433e-04 - loo: 0.0544 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 59/200
+2500/2500 - 3s - loss: 2.4927e-04 - loo: 0.0553 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 60/200
+2500/2500 - 3s - loss: 2.4321e-04 - loo: 0.0543 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 61/200
+2500/2500 - 3s - loss: 2.5035e-04 - loo: 0.0562 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 62/200
+2500/2500 - 3s - loss: 2.4618e-04 - loo: 0.0555 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 63/200
+2500/2500 - 3s - loss: 2.6777e-04 - loo: 0.0574 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 64/200
+2500/2500 - 3s - loss: 2.4879e-04 - loo: 0.0555 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 65/200
+2500/2500 - 4s - loss: 2.4354e-04 - loo: 0.0547 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 66/200
+2500/2500 - 4s - loss: 2.5292e-04 - loo: 0.0566 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 67/200
+2500/2500 - 4s - loss: 2.4711e-04 - loo: 0.0555 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 68/200
+2500/2500 - 3s - loss: 2.4066e-04 - loo: 0.0526 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 69/200
+2500/2500 - 3s - loss: 2.4566e-04 - loo: 0.0552 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 70/200
+2500/2500 - 3s - loss: 2.3686e-04 - loo: 0.0527 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 71/200
+2500/2500 - 4s - loss: 2.5071e-04 - loo: 0.0561 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 72/200
+2500/2500 - 3s - loss: 2.4972e-04 - loo: 0.0555 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 73/200
+2500/2500 - 4s - loss: 2.4131e-04 - loo: 0.0536 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 74/200
+2500/2500 - 4s - loss: 2.4094e-04 - loo: 0.0539 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 75/200
+2500/2500 - 4s - loss: 2.4661e-04 - loo: 0.0558 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 76/200
+2500/2500 - 3s - loss: 2.4221e-04 - loo: 0.0545 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 77/200
+2500/2500 - 4s - loss: 2.3587e-04 - loo: 0.0524 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 78/200
+2500/2500 - 3s - loss: 2.4257e-04 - loo: 0.0535 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 79/200
+2500/2500 - 4s - loss: 2.4421e-04 - loo: 0.0545 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 80/200
+2500/2500 - 3s - loss: 2.4769e-04 - loo: 0.0558 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 81/200
+2500/2500 - 4s - loss: 2.3168e-04 - loo: 0.0514 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 82/200
+2500/2500 - 4s - loss: 2.3997e-04 - loo: 0.0537 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 83/200
+2500/2500 - 3s - loss: 2.3866e-04 - loo: 0.0537 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 84/200
+2500/2500 - 4s - loss: 2.3550e-04 - loo: 0.0530 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 85/200
+2500/2500 - 3s - loss: 2.3928e-04 - loo: 0.0542 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 86/200
+2500/2500 - 3s - loss: 2.4018e-04 - loo: 0.0537 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 87/200
+2500/2500 - 4s - loss: 2.3847e-04 - loo: 0.0535 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 88/200
+2500/2500 - 4s - loss: 2.4108e-04 - loo: 0.0532 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 89/200
+2500/2500 - 4s - loss: 2.3788e-04 - loo: 0.0541 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 90/200
+2500/2500 - 4s - loss: 2.3881e-04 - loo: 0.0515 - lr: 0.0010 - 4s/epoch - 1ms/step
+Epoch 91/200
+2500/2500 - 3s - loss: 2.3359e-04 - loo: 0.0525 - lr: 0.0010 - 3s/epoch - 1ms/step
+Epoch 92/200
+2500/2500 - 3s - loss: 1.9999e-04 - loo: 0.0416 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 93/200
+2500/2500 - 3s - loss: 2.0553e-04 - loo: 0.0412 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 94/200
+2500/2500 - 3s - loss: 2.0194e-04 - loo: 0.0419 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 95/200
+2500/2500 - 3s - loss: 2.0035e-04 - loo: 0.0446 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 96/200
+2500/2500 - 3s - loss: 2.0137e-04 - loo: 0.0450 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 97/200
+2500/2500 - 3s - loss: 2.0114e-04 - loo: 0.0433 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 98/200
+2500/2500 - 3s - loss: 2.0094e-04 - loo: 0.0443 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 99/200
+2500/2500 - 3s - loss: 1.9814e-04 - loo: 0.0415 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 100/200
+2500/2500 - 3s - loss: 1.9951e-04 - loo: 0.0440 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 101/200
+2500/2500 - 4s - loss: 2.0388e-04 - loo: 0.0420 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 102/200
+2500/2500 - 3s - loss: 1.9896e-04 - loo: 0.0445 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 103/200
+2500/2500 - 3s - loss: 1.9707e-04 - loo: 0.0413 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 104/200
+2500/2500 - 3s - loss: 2.0198e-04 - loo: 0.0418 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 105/200
+2500/2500 - 3s - loss: 2.0271e-04 - loo: 0.0470 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 106/200
+2500/2500 - 3s - loss: 1.9840e-04 - loo: 0.0459 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 107/200
+2500/2500 - 3s - loss: 2.0115e-04 - loo: 0.0429 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 108/200
+2500/2500 - 4s - loss: 1.9878e-04 - loo: 0.0442 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 109/200
+2500/2500 - 3s - loss: 1.9644e-04 - loo: 0.0428 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 110/200
+2500/2500 - 3s - loss: 1.9998e-04 - loo: 0.0464 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 111/200
+2500/2500 - 3s - loss: 1.9731e-04 - loo: 0.0440 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 112/200
+2500/2500 - 3s - loss: 1.9160e-04 - loo: 0.0439 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 113/200
+2500/2500 - 3s - loss: 1.9892e-04 - loo: 0.0460 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 114/200
+2500/2500 - 3s - loss: 1.9998e-04 - loo: 0.0455 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 115/200
+2500/2500 - 4s - loss: 1.9657e-04 - loo: 0.0397 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 116/200
+2500/2500 - 3s - loss: 2.0301e-04 - loo: 0.0445 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 117/200
+2500/2500 - 3s - loss: 1.9996e-04 - loo: 0.0440 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 118/200
+2500/2500 - 4s - loss: 1.9759e-04 - loo: 0.0433 - lr: 5.0000e-04 - 4s/epoch - 1ms/step
+Epoch 119/200
+2500/2500 - 3s - loss: 1.9800e-04 - loo: 0.0447 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 120/200
+2500/2500 - 3s - loss: 2.0139e-04 - loo: 0.0442 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 121/200
+2500/2500 - 3s - loss: 1.9861e-04 - loo: 0.0429 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 122/200
+2500/2500 - 3s - loss: 2.0081e-04 - loo: 0.0424 - lr: 5.0000e-04 - 3s/epoch - 1ms/step
+Epoch 123/200
+2500/2500 - 3s - loss: 1.7858e-04 - loo: 0.0358 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 124/200
+2500/2500 - 3s - loss: 1.7888e-04 - loo: 0.0398 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 125/200
+2500/2500 - 3s - loss: 1.6549e-04 - loo: 0.0347 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 126/200
+2500/2500 - 4s - loss: 1.6813e-04 - loo: 0.0394 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 127/200
+2500/2500 - 4s - loss: 1.6996e-04 - loo: 0.0377 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 128/200
+2500/2500 - 4s - loss: 1.6728e-04 - loo: 0.0384 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 129/200
+2500/2500 - 3s - loss: 1.6846e-04 - loo: 0.0398 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 130/200
+2500/2500 - 4s - loss: 1.6333e-04 - loo: 0.0433 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 131/200
+2500/2500 - 3s - loss: 1.8110e-04 - loo: 0.0447 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 132/200
+2500/2500 - 3s - loss: 1.7179e-04 - loo: 0.0370 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 133/200
+2500/2500 - 3s - loss: 1.7767e-04 - loo: 0.0398 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 134/200
+2500/2500 - 3s - loss: 1.5633e-04 - loo: 0.0384 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 135/200
+2500/2500 - 3s - loss: 1.7703e-04 - loo: 0.0426 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 136/200
+2500/2500 - 3s - loss: 1.7030e-04 - loo: 0.0384 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 137/200
+2500/2500 - 3s - loss: 1.4274e-04 - loo: 0.0352 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 138/200
+2500/2500 - 3s - loss: 1.6626e-04 - loo: 0.0350 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 139/200
+2500/2500 - 3s - loss: 1.7755e-04 - loo: 0.0346 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 140/200
+2500/2500 - 3s - loss: 1.9365e-04 - loo: 0.0395 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 141/200
+2500/2500 - 3s - loss: 1.7290e-04 - loo: 0.0403 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 142/200
+2500/2500 - 4s - loss: 1.6309e-04 - loo: 0.0372 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 143/200
+2500/2500 - 4s - loss: 1.6459e-04 - loo: 0.0393 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 144/200
+2500/2500 - 3s - loss: 1.6251e-04 - loo: 0.0365 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 145/200
+2500/2500 - 3s - loss: 1.6376e-04 - loo: 0.0387 - lr: 2.5000e-04 - 3s/epoch - 1ms/step
+Epoch 146/200
+2500/2500 - 4s - loss: 1.5902e-04 - loo: 0.0368 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 147/200
+2500/2500 - 4s - loss: 1.6637e-04 - loo: 0.0350 - lr: 2.5000e-04 - 4s/epoch - 1ms/step
+Epoch 148/200
+2500/2500 - 4s - loss: 1.4585e-04 - loo: 0.0352 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 149/200
+2500/2500 - 4s - loss: 1.2160e-04 - loo: 0.0314 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 150/200
+2500/2500 - 3s - loss: 1.2205e-04 - loo: 0.0346 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 151/200
+2500/2500 - 4s - loss: 1.3503e-04 - loo: 0.0328 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 152/200
+2500/2500 - 4s - loss: 1.3633e-04 - loo: 0.0314 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 153/200
+2500/2500 - 4s - loss: 1.0793e-04 - loo: 0.0316 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 154/200
+2500/2500 - 3s - loss: 1.2766e-04 - loo: 0.0309 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 155/200
+2500/2500 - 3s - loss: 1.1944e-04 - loo: 0.0305 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 156/200
+2500/2500 - 3s - loss: 1.0435e-04 - loo: 0.0307 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 157/200
+2500/2500 - 3s - loss: 1.1147e-04 - loo: 0.0277 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 158/200
+2500/2500 - 3s - loss: 1.1381e-04 - loo: 0.0308 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 159/200
+2500/2500 - 4s - loss: 8.7684e-05 - loo: 0.0269 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 160/200
+2500/2500 - 4s - loss: 1.1520e-04 - loo: 0.0310 - lr: 1.2500e-04 - 4s/epoch - 1ms/step
+Epoch 161/200
+2500/2500 - 3s - loss: 9.1364e-05 - loo: 0.0277 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 162/200
+2500/2500 - 3s - loss: 1.1404e-04 - loo: 0.0304 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 163/200
+2500/2500 - 3s - loss: 9.8363e-05 - loo: 0.0285 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 164/200
+2500/2500 - 3s - loss: 1.3057e-04 - loo: 0.0314 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 165/200
+2500/2500 - 3s - loss: 1.1964e-04 - loo: 0.0291 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 166/200
+2500/2500 - 3s - loss: 9.4445e-05 - loo: 0.0284 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 167/200
+2500/2500 - 3s - loss: 9.1008e-05 - loo: 0.0263 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 168/200
+2500/2500 - 3s - loss: 1.0122e-04 - loo: 0.0285 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 169/200
+2500/2500 - 3s - loss: 9.4035e-05 - loo: 0.0267 - lr: 1.2500e-04 - 3s/epoch - 1ms/step
+Epoch 170/200
+2500/2500 - 3s - loss: 7.1610e-05 - loo: 0.0232 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 171/200
+2500/2500 - 3s - loss: 4.9018e-05 - loo: 0.0191 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 172/200
+2500/2500 - 3s - loss: 6.9486e-05 - loo: 0.0221 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 173/200
+2500/2500 - 4s - loss: 3.6284e-05 - loo: 0.0164 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 174/200
+2500/2500 - 4s - loss: 4.0437e-05 - loo: 0.0167 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 175/200
+2500/2500 - 4s - loss: 6.1419e-05 - loo: 0.0196 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 176/200
+2500/2500 - 3s - loss: 3.0296e-05 - loo: 0.0150 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 177/200
+2500/2500 - 3s - loss: 5.8868e-05 - loo: 0.0191 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 178/200
+2500/2500 - 3s - loss: 3.3986e-05 - loo: 0.0160 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 179/200
+2500/2500 - 3s - loss: 5.3176e-05 - loo: 0.0178 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 180/200
+2500/2500 - 3s - loss: 3.3673e-05 - loo: 0.0152 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 181/200
+2500/2500 - 4s - loss: 2.6679e-05 - loo: 0.0138 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 182/200
+2500/2500 - 4s - loss: 6.7926e-05 - loo: 0.0192 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 183/200
+2500/2500 - 4s - loss: 3.9815e-05 - loo: 0.0155 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 184/200
+2500/2500 - 3s - loss: 2.9539e-05 - loo: 0.0137 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 185/200
+2500/2500 - 4s - loss: 6.8507e-05 - loo: 0.0199 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 186/200
+2500/2500 - 3s - loss: 5.1449e-05 - loo: 0.0173 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 187/200
+2500/2500 - 4s - loss: 6.8291e-05 - loo: 0.0196 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 188/200
+2500/2500 - 4s - loss: 3.6993e-05 - loo: 0.0156 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 189/200
+2500/2500 - 4s - loss: 3.6465e-05 - loo: 0.0150 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 190/200
+2500/2500 - 3s - loss: 5.5608e-05 - loo: 0.0182 - lr: 6.2500e-05 - 3s/epoch - 1ms/step
+Epoch 191/200
+2500/2500 - 4s - loss: 4.5541e-05 - loo: 0.0169 - lr: 6.2500e-05 - 4s/epoch - 1ms/step
+Epoch 192/200
+2500/2500 - 4s - loss: 2.6713e-05 - loo: 0.0133 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 193/200
+2500/2500 - 4s - loss: 2.4754e-05 - loo: 0.0124 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 194/200
+2500/2500 - 3s - loss: 2.4552e-05 - loo: 0.0122 - lr: 3.1250e-05 - 3s/epoch - 1ms/step
+Epoch 195/200
+2500/2500 - 4s - loss: 2.6005e-05 - loo: 0.0128 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 196/200
+2500/2500 - 4s - loss: 2.4397e-05 - loo: 0.0120 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 197/200
+2500/2500 - 4s - loss: 2.4402e-05 - loo: 0.0120 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 198/200
+2500/2500 - 4s - loss: 2.4395e-05 - loo: 0.0120 - lr: 3.1250e-05 - 4s/epoch - 1ms/step
+Epoch 199/200
+2500/2500 - 3s - loss: 2.8724e-05 - loo: 0.0129 - lr: 3.1250e-05 - 3s/epoch - 1ms/step
+Epoch 200/200
+2500/2500 - 3s - loss: 2.4254e-05 - loo: 0.0117 - lr: 3.1250e-05 - 3s/epoch - 1ms/step
+Total training time: 702.1780953407288 [s]
+236800/236800 - 233s - 233s/epoch - 983us/step
+Model: "model_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_30 (Dense)            (None, 80)                400       
+                                                                 
+ dense_31 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_32 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_33 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_34 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_35 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_36 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_37 (Dense)            (None, 80)                6480      
+                                                                 
+ dense_38 (Dense)            (None, 3)                 243       
+                                                                 
+=================================================================
+Total params: 46,003
+Trainable params: 46,003
+Non-trainable params: 0
+_________________________________________________________________
+{'xi_kind': 'param', 'depth': 8, 'width': 80, 'activation': 'tanh', 'subsample_size': 80000, 'batch_size': 32}
+----------------------
+err_loo: 0.9879500375761047
+err_mae: 0.0010729584466647592
+err_mse: 0.008042979984572356
+----------------------
+Data size (7577600, 10)
+Model: "model_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_5 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_39 (Dense)            (None, 90)                450       
+                                                                 
+ dense_40 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_41 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_42 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_43 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_44 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_45 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_46 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_47 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_48 (Dense)            (None, 3)                 273       
+                                                                 
+=================================================================
+Total params: 66,243
+Trainable params: 66,243
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2500/2500 - 4s - loss: 0.0040 - loo: 0.2573 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 2/200
+2500/2500 - 4s - loss: 0.0021 - loo: 0.2075 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 3/200
+2500/2500 - 4s - loss: 8.9402e-04 - loo: 0.1330 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 4/200
+2500/2500 - 4s - loss: 7.2170e-04 - loo: 0.1174 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 5/200
+2500/2500 - 4s - loss: 5.6406e-04 - loo: 0.1035 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 6/200
+2500/2500 - 4s - loss: 5.4656e-04 - loo: 0.1008 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 7/200
+2500/2500 - 4s - loss: 4.4952e-04 - loo: 0.0906 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 8/200
+2500/2500 - 4s - loss: 4.3017e-04 - loo: 0.0865 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 9/200
+2500/2500 - 4s - loss: 3.9497e-04 - loo: 0.0821 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 10/200
+2500/2500 - 4s - loss: 3.8666e-04 - loo: 0.0816 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 11/200
+2500/2500 - 4s - loss: 3.4783e-04 - loo: 0.0750 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 12/200
+2500/2500 - 4s - loss: 3.5068e-04 - loo: 0.0748 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 13/200
+2500/2500 - 4s - loss: 3.4109e-04 - loo: 0.0736 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 14/200
+2500/2500 - 4s - loss: 3.1254e-04 - loo: 0.0686 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 15/200
+2500/2500 - 4s - loss: 3.0720e-04 - loo: 0.0675 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 16/200
+2500/2500 - 4s - loss: 3.1489e-04 - loo: 0.0687 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 17/200
+2500/2500 - 4s - loss: 2.9151e-04 - loo: 0.0644 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 18/200
+2500/2500 - 4s - loss: 3.0221e-04 - loo: 0.0665 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 19/200
+2500/2500 - 4s - loss: 2.8947e-04 - loo: 0.0646 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 20/200
+2500/2500 - 4s - loss: 2.8205e-04 - loo: 0.0620 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 21/200
+2500/2500 - 4s - loss: 2.8321e-04 - loo: 0.0626 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 22/200
+2500/2500 - 4s - loss: 2.8184e-04 - loo: 0.0623 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 23/200
+2500/2500 - 4s - loss: 2.7938e-04 - loo: 0.0617 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 24/200
+2500/2500 - 4s - loss: 2.7503e-04 - loo: 0.0612 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 25/200
+2500/2500 - 4s - loss: 2.6603e-04 - loo: 0.0586 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 26/200
+2500/2500 - 4s - loss: 2.6887e-04 - loo: 0.0594 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 27/200
+2500/2500 - 4s - loss: 2.7958e-04 - loo: 0.0620 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 28/200
+2500/2500 - 4s - loss: 2.6568e-04 - loo: 0.0586 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 29/200
+2500/2500 - 4s - loss: 2.6932e-04 - loo: 0.0592 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 30/200
+2500/2500 - 4s - loss: 2.6363e-04 - loo: 0.0584 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 31/200
+2500/2500 - 4s - loss: 2.6903e-04 - loo: 0.0596 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 32/200
+2500/2500 - 4s - loss: 2.6228e-04 - loo: 0.0584 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 33/200
+2500/2500 - 4s - loss: 2.5869e-04 - loo: 0.0578 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 34/200
+2500/2500 - 4s - loss: 2.6341e-04 - loo: 0.0588 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 35/200
+2500/2500 - 4s - loss: 2.5234e-04 - loo: 0.0562 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 36/200
+2500/2500 - 4s - loss: 2.6080e-04 - loo: 0.0575 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 37/200
+2500/2500 - 4s - loss: 2.6197e-04 - loo: 0.0578 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 38/200
+2500/2500 - 4s - loss: 2.5803e-04 - loo: 0.0578 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 39/200
+2500/2500 - 4s - loss: 2.5202e-04 - loo: 0.0558 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 40/200
+2500/2500 - 4s - loss: 2.5094e-04 - loo: 0.0560 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 41/200
+2500/2500 - 4s - loss: 2.5997e-04 - loo: 0.0583 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 42/200
+2500/2500 - 4s - loss: 2.5506e-04 - loo: 0.0564 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 43/200
+2500/2500 - 4s - loss: 2.5301e-04 - loo: 0.0563 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 44/200
+2500/2500 - 4s - loss: 2.4954e-04 - loo: 0.0559 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 45/200
+2500/2500 - 4s - loss: 2.4977e-04 - loo: 0.0556 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 46/200
+2500/2500 - 4s - loss: 2.5231e-04 - loo: 0.0563 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 47/200
+2500/2500 - 4s - loss: 2.5870e-04 - loo: 0.0583 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 48/200
+2500/2500 - 4s - loss: 2.4683e-04 - loo: 0.0544 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 49/200
+2500/2500 - 4s - loss: 2.4732e-04 - loo: 0.0553 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 50/200
+2500/2500 - 4s - loss: 2.4871e-04 - loo: 0.0551 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 51/200
+2500/2500 - 4s - loss: 2.4632e-04 - loo: 0.0554 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 52/200
+2500/2500 - 4s - loss: 2.5630e-04 - loo: 0.0580 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 53/200
+2500/2500 - 4s - loss: 2.4330e-04 - loo: 0.0534 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 54/200
+2500/2500 - 4s - loss: 2.5159e-04 - loo: 0.0568 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 55/200
+2500/2500 - 4s - loss: 2.4458e-04 - loo: 0.0546 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 56/200
+2500/2500 - 4s - loss: 2.4944e-04 - loo: 0.0565 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 57/200
+2500/2500 - 4s - loss: 2.4870e-04 - loo: 0.0558 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 58/200
+2500/2500 - 4s - loss: 2.4750e-04 - loo: 0.0561 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 59/200
+2500/2500 - 4s - loss: 2.4481e-04 - loo: 0.0547 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 60/200
+2500/2500 - 4s - loss: 2.5201e-04 - loo: 0.0568 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 61/200
+2500/2500 - 4s - loss: 2.4181e-04 - loo: 0.0543 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 62/200
+2500/2500 - 4s - loss: 2.4495e-04 - loo: 0.0554 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 63/200
+2500/2500 - 4s - loss: 2.4235e-04 - loo: 0.0545 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 64/200
+2500/2500 - 4s - loss: 2.5093e-04 - loo: 0.0574 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 65/200
+2500/2500 - 4s - loss: 2.5062e-04 - loo: 0.0570 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 66/200
+2500/2500 - 4s - loss: 2.3709e-04 - loo: 0.0529 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 67/200
+2500/2500 - 4s - loss: 2.4298e-04 - loo: 0.0549 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 68/200
+2500/2500 - 4s - loss: 2.4446e-04 - loo: 0.0555 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 69/200
+2500/2500 - 4s - loss: 2.4412e-04 - loo: 0.0565 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 70/200
+2500/2500 - 4s - loss: 2.6216e-04 - loo: 0.0584 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 71/200
+2500/2500 - 4s - loss: 2.4556e-04 - loo: 0.0561 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 72/200
+2500/2500 - 4s - loss: 2.4374e-04 - loo: 0.0555 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 73/200
+2500/2500 - 4s - loss: 2.5615e-04 - loo: 0.0562 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 74/200
+2500/2500 - 4s - loss: 2.3947e-04 - loo: 0.0540 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 75/200
+2500/2500 - 4s - loss: 2.5091e-04 - loo: 0.0556 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 76/200
+2500/2500 - 4s - loss: 2.4400e-04 - loo: 0.0547 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 77/200
+2500/2500 - 4s - loss: 2.0510e-04 - loo: 0.0444 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 78/200
+2500/2500 - 4s - loss: 2.1199e-04 - loo: 0.0460 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 79/200
+2500/2500 - 4s - loss: 2.0425e-04 - loo: 0.0443 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 80/200
+2500/2500 - 4s - loss: 2.0389e-04 - loo: 0.0456 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 81/200
+2500/2500 - 4s - loss: 2.0548e-04 - loo: 0.0445 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 82/200
+2500/2500 - 4s - loss: 2.0073e-04 - loo: 0.0419 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 83/200
+2500/2500 - 4s - loss: 2.1553e-04 - loo: 0.0449 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 84/200
+2500/2500 - 4s - loss: 1.9882e-04 - loo: 0.0428 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 85/200
+2500/2500 - 4s - loss: 2.1008e-04 - loo: 0.0432 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 86/200
+2500/2500 - 4s - loss: 2.0343e-04 - loo: 0.0441 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 87/200
+2500/2500 - 4s - loss: 2.1056e-04 - loo: 0.0433 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 88/200
+2500/2500 - 4s - loss: 2.0593e-04 - loo: 0.0411 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 89/200
+2500/2500 - 4s - loss: 2.0351e-04 - loo: 0.0404 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 90/200
+2500/2500 - 4s - loss: 2.0885e-04 - loo: 0.0428 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 91/200
+2500/2500 - 4s - loss: 2.0265e-04 - loo: 0.0435 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 92/200
+2500/2500 - 4s - loss: 2.1128e-04 - loo: 0.0490 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 93/200
+2500/2500 - 4s - loss: 1.9832e-04 - loo: 0.0458 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 94/200
+2500/2500 - 4s - loss: 2.0143e-04 - loo: 0.0452 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 95/200
+2500/2500 - 4s - loss: 2.0690e-04 - loo: 0.0471 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 96/200
+2500/2500 - 4s - loss: 2.0247e-04 - loo: 0.0465 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 97/200
+2500/2500 - 4s - loss: 1.9978e-04 - loo: 0.0469 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 98/200
+2500/2500 - 4s - loss: 1.9171e-04 - loo: 0.0418 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 99/200
+2500/2500 - 4s - loss: 2.0424e-04 - loo: 0.0453 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 100/200
+2500/2500 - 4s - loss: 2.0964e-04 - loo: 0.0473 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 101/200
+2500/2500 - 4s - loss: 1.9575e-04 - loo: 0.0432 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 102/200
+2500/2500 - 4s - loss: 2.0343e-04 - loo: 0.0458 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 103/200
+2500/2500 - 4s - loss: 2.0668e-04 - loo: 0.0485 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 104/200
+2500/2500 - 4s - loss: 1.9838e-04 - loo: 0.0456 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 105/200
+2500/2500 - 4s - loss: 1.9888e-04 - loo: 0.0439 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 106/200
+2500/2500 - 4s - loss: 2.0421e-04 - loo: 0.0486 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 107/200
+2500/2500 - 4s - loss: 1.9324e-04 - loo: 0.0433 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 108/200
+2500/2500 - 4s - loss: 2.0166e-04 - loo: 0.0401 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 109/200
+2500/2500 - 4s - loss: 1.9376e-04 - loo: 0.0367 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 110/200
+2500/2500 - 4s - loss: 1.8500e-04 - loo: 0.0364 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 111/200
+2500/2500 - 4s - loss: 1.7890e-04 - loo: 0.0404 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 112/200
+2500/2500 - 4s - loss: 1.7500e-04 - loo: 0.0413 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 113/200
+2500/2500 - 4s - loss: 1.8176e-04 - loo: 0.0418 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 114/200
+2500/2500 - 4s - loss: 1.6630e-04 - loo: 0.0380 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 115/200
+2500/2500 - 4s - loss: 1.7117e-04 - loo: 0.0406 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 116/200
+2500/2500 - 4s - loss: 1.8613e-04 - loo: 0.0378 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 117/200
+2500/2500 - 4s - loss: 1.6565e-04 - loo: 0.0391 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 118/200
+2500/2500 - 4s - loss: 1.6881e-04 - loo: 0.0422 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 119/200
+2500/2500 - 4s - loss: 1.7666e-04 - loo: 0.0409 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 120/200
+2500/2500 - 4s - loss: 1.7559e-04 - loo: 0.0389 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 121/200
+2500/2500 - 4s - loss: 1.6923e-04 - loo: 0.0428 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 122/200
+2500/2500 - 4s - loss: 1.7134e-04 - loo: 0.0387 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 123/200
+2500/2500 - 4s - loss: 1.9510e-04 - loo: 0.0415 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 124/200
+2500/2500 - 4s - loss: 1.9273e-04 - loo: 0.0364 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 125/200
+2500/2500 - 4s - loss: 1.8096e-04 - loo: 0.0423 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 126/200
+2500/2500 - 4s - loss: 1.8113e-04 - loo: 0.0406 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 127/200
+2500/2500 - 4s - loss: 1.6783e-04 - loo: 0.0423 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 128/200
+2500/2500 - 4s - loss: 1.3759e-04 - loo: 0.0348 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 129/200
+2500/2500 - 4s - loss: 1.4382e-04 - loo: 0.0344 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 130/200
+2500/2500 - 4s - loss: 1.2102e-04 - loo: 0.0328 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 131/200
+2500/2500 - 4s - loss: 1.3327e-04 - loo: 0.0357 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 132/200
+2500/2500 - 4s - loss: 1.4751e-04 - loo: 0.0322 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 133/200
+2500/2500 - 4s - loss: 1.3020e-04 - loo: 0.0357 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 134/200
+2500/2500 - 4s - loss: 1.6682e-04 - loo: 0.0366 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 135/200
+2500/2500 - 4s - loss: 1.3529e-04 - loo: 0.0334 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 136/200
+2500/2500 - 4s - loss: 1.3005e-04 - loo: 0.0320 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 137/200
+2500/2500 - 4s - loss: 1.2895e-04 - loo: 0.0335 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 138/200
+2500/2500 - 4s - loss: 1.2982e-04 - loo: 0.0340 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 139/200
+2500/2500 - 4s - loss: 1.3355e-04 - loo: 0.0330 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 140/200
+2500/2500 - 4s - loss: 1.3981e-04 - loo: 0.0342 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 141/200
+2500/2500 - 4s - loss: 7.8800e-05 - loo: 0.0261 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 142/200
+2500/2500 - 4s - loss: 7.4080e-05 - loo: 0.0244 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 143/200
+2500/2500 - 4s - loss: 1.0358e-04 - loo: 0.0274 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 144/200
+2500/2500 - 4s - loss: 6.7298e-05 - loo: 0.0232 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 145/200
+2500/2500 - 4s - loss: 6.9671e-05 - loo: 0.0232 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 146/200
+2500/2500 - 4s - loss: 7.7620e-05 - loo: 0.0244 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 147/200
+2500/2500 - 4s - loss: 6.3187e-05 - loo: 0.0225 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 148/200
+2500/2500 - 4s - loss: 7.1315e-05 - loo: 0.0237 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 149/200
+2500/2500 - 4s - loss: 6.8945e-05 - loo: 0.0235 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 150/200
+2500/2500 - 4s - loss: 6.9127e-05 - loo: 0.0231 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 151/200
+2500/2500 - 4s - loss: 6.2858e-05 - loo: 0.0209 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 152/200
+2500/2500 - 4s - loss: 9.4767e-05 - loo: 0.0244 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 153/200
+2500/2500 - 4s - loss: 5.8322e-05 - loo: 0.0212 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 154/200
+2500/2500 - 4s - loss: 5.2038e-05 - loo: 0.0206 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 155/200
+2500/2500 - 4s - loss: 6.1910e-05 - loo: 0.0206 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 156/200
+2500/2500 - 4s - loss: 8.1604e-05 - loo: 0.0230 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 157/200
+2500/2500 - 4s - loss: 6.5228e-05 - loo: 0.0226 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 158/200
+2500/2500 - 4s - loss: 5.6569e-05 - loo: 0.0213 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 159/200
+2500/2500 - 4s - loss: 4.2640e-05 - loo: 0.0180 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 160/200
+2500/2500 - 4s - loss: 3.2564e-05 - loo: 0.0162 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 161/200
+2500/2500 - 4s - loss: 3.2415e-05 - loo: 0.0159 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 162/200
+2500/2500 - 4s - loss: 1.0164e-04 - loo: 0.0260 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 163/200
+2500/2500 - 4s - loss: 3.4323e-05 - loo: 0.0168 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 164/200
+2500/2500 - 4s - loss: 3.2063e-05 - loo: 0.0158 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 165/200
+2500/2500 - 4s - loss: 3.2115e-05 - loo: 0.0157 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 166/200
+2500/2500 - 4s - loss: 3.2114e-05 - loo: 0.0156 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 167/200
+2500/2500 - 4s - loss: 1.3386e-04 - loo: 0.0315 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 168/200
+2500/2500 - 4s - loss: 9.6989e-05 - loo: 0.0266 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 169/200
+2500/2500 - 4s - loss: 8.8319e-05 - loo: 0.0252 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 170/200
+2500/2500 - 4s - loss: 6.2393e-05 - loo: 0.0206 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 171/200
+2500/2500 - 4s - loss: 1.0918e-04 - loo: 0.0282 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 172/200
+2500/2500 - 4s - loss: 1.0106e-04 - loo: 0.0245 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 173/200
+2500/2500 - 4s - loss: 6.2143e-05 - loo: 0.0198 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 174/200
+2500/2500 - 4s - loss: 3.1969e-05 - loo: 0.0158 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 175/200
+2500/2500 - 4s - loss: 3.1869e-05 - loo: 0.0156 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 176/200
+2500/2500 - 4s - loss: 7.7560e-05 - loo: 0.0213 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 177/200
+2500/2500 - 4s - loss: 1.0316e-04 - loo: 0.0263 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 178/200
+2500/2500 - 4s - loss: 8.1895e-05 - loo: 0.0244 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 179/200
+2500/2500 - 4s - loss: 7.0899e-05 - loo: 0.0229 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 180/200
+2500/2500 - 4s - loss: 7.7185e-05 - loo: 0.0230 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 181/200
+2500/2500 - 4s - loss: 7.6179e-05 - loo: 0.0228 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 182/200
+2500/2500 - 4s - loss: 3.2009e-05 - loo: 0.0160 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 183/200
+2500/2500 - 4s - loss: 6.1688e-05 - loo: 0.0212 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 184/200
+2500/2500 - 4s - loss: 5.9473e-05 - loo: 0.0206 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 185/200
+2500/2500 - 4s - loss: 4.5470e-05 - loo: 0.0189 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 186/200
+2500/2500 - 4s - loss: 3.0828e-05 - loo: 0.0152 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 187/200
+2500/2500 - 4s - loss: 3.0825e-05 - loo: 0.0152 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 188/200
+2500/2500 - 4s - loss: 3.0846e-05 - loo: 0.0152 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 189/200
+2500/2500 - 4s - loss: 3.5114e-05 - loo: 0.0157 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 190/200
+2500/2500 - 4s - loss: 3.0787e-05 - loo: 0.0152 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 191/200
+2500/2500 - 4s - loss: 3.0652e-05 - loo: 0.0150 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 192/200
+2500/2500 - 4s - loss: 3.0660e-05 - loo: 0.0151 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 193/200
+2500/2500 - 4s - loss: 3.0642e-05 - loo: 0.0151 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 194/200
+2500/2500 - 4s - loss: 3.0598e-05 - loo: 0.0150 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 195/200
+2500/2500 - 4s - loss: 3.0554e-05 - loo: 0.0150 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 196/200
+2500/2500 - 4s - loss: 3.6638e-05 - loo: 0.0168 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 197/200
+2500/2500 - 4s - loss: 3.0260e-05 - loo: 0.0149 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 198/200
+2500/2500 - 4s - loss: 3.0311e-05 - loo: 0.0149 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 199/200
+2500/2500 - 4s - loss: 3.0376e-05 - loo: 0.0150 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 200/200
+2500/2500 - 4s - loss: 3.0400e-05 - loo: 0.0150 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Total training time: 809.4578897953033 [s]
+236800/236800 - 311s - 311s/epoch - 1ms/step
+Model: "model_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_5 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_39 (Dense)            (None, 90)                450       
+                                                                 
+ dense_40 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_41 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_42 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_43 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_44 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_45 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_46 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_47 (Dense)            (None, 90)                8190      
+                                                                 
+ dense_48 (Dense)            (None, 3)                 273       
+                                                                 
+=================================================================
+Total params: 66,243
+Trainable params: 66,243
+Non-trainable params: 0
+_________________________________________________________________
+{'xi_kind': 'param', 'depth': 9, 'width': 90, 'activation': 'tanh', 'subsample_size': 80000, 'batch_size': 32}
+----------------------
+err_loo: 1.0059321913144996
+err_mae: 0.0011191872738570451
+err_mse: 0.00885275773531171
+----------------------
+Data size (7577600, 10)
+Model: "model_5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_6 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_49 (Dense)            (None, 100)               500       
+                                                                 
+ dense_50 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_51 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_52 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_53 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_54 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_55 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_56 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_57 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_58 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_59 (Dense)            (None, 3)                 303       
+                                                                 
+=================================================================
+Total params: 91,703
+Trainable params: 91,703
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/200
+2500/2500 - 5s - loss: 0.0040 - loo: 0.2529 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 2/200
+2500/2500 - 5s - loss: 0.0015 - loo: 0.1706 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 3/200
+2500/2500 - 5s - loss: 8.1995e-04 - loo: 0.1268 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 4/200
+2500/2500 - 5s - loss: 6.7532e-04 - loo: 0.1142 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 5/200
+2500/2500 - 5s - loss: 5.4608e-04 - loo: 0.1029 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 6/200
+2500/2500 - 4s - loss: 5.0778e-04 - loo: 0.0983 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 7/200
+2500/2500 - 4s - loss: 4.3922e-04 - loo: 0.0896 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 8/200
+2500/2500 - 4s - loss: 4.1105e-04 - loo: 0.0858 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 9/200
+2500/2500 - 5s - loss: 3.7371e-04 - loo: 0.0817 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 10/200
+2500/2500 - 4s - loss: 3.4638e-04 - loo: 0.0774 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 11/200
+2500/2500 - 4s - loss: 5.1238e-04 - loo: 0.0917 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 12/200
+2500/2500 - 5s - loss: 3.7860e-04 - loo: 0.0820 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 13/200
+2500/2500 - 4s - loss: 5.6504e-04 - loo: 0.0990 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 14/200
+2500/2500 - 5s - loss: 3.4532e-04 - loo: 0.0774 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 15/200
+2500/2500 - 4s - loss: 3.3651e-04 - loo: 0.0751 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 16/200
+2500/2500 - 4s - loss: 3.3427e-04 - loo: 0.0747 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 17/200
+2500/2500 - 4s - loss: 3.2623e-04 - loo: 0.0739 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 18/200
+2500/2500 - 4s - loss: 2.9760e-04 - loo: 0.0698 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 19/200
+2500/2500 - 4s - loss: 3.0191e-04 - loo: 0.0698 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 20/200
+2500/2500 - 4s - loss: 3.0655e-04 - loo: 0.0704 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 21/200
+2500/2500 - 5s - loss: 2.8261e-04 - loo: 0.0663 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 22/200
+2500/2500 - 5s - loss: 2.8180e-04 - loo: 0.0659 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 23/200
+2500/2500 - 5s - loss: 2.8195e-04 - loo: 0.0651 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 24/200
+2500/2500 - 4s - loss: 2.8562e-04 - loo: 0.0665 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 25/200
+2500/2500 - 5s - loss: 2.9771e-04 - loo: 0.0682 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 26/200
+2500/2500 - 4s - loss: 2.7092e-04 - loo: 0.0627 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 27/200
+2500/2500 - 4s - loss: 2.7294e-04 - loo: 0.0646 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 28/200
+2500/2500 - 5s - loss: 2.8489e-04 - loo: 0.0659 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 29/200
+2500/2500 - 5s - loss: 2.8879e-04 - loo: 0.0669 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 30/200
+2500/2500 - 4s - loss: 2.7771e-04 - loo: 0.0646 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 31/200
+2500/2500 - 4s - loss: 2.5773e-04 - loo: 0.0601 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 32/200
+2500/2500 - 4s - loss: 2.6634e-04 - loo: 0.0624 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 33/200
+2500/2500 - 4s - loss: 2.6210e-04 - loo: 0.0609 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 34/200
+2500/2500 - 4s - loss: 2.6934e-04 - loo: 0.0631 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 35/200
+2500/2500 - 5s - loss: 2.7872e-04 - loo: 0.0645 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 36/200
+2500/2500 - 4s - loss: 2.6136e-04 - loo: 0.0607 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 37/200
+2500/2500 - 4s - loss: 2.7335e-04 - loo: 0.0637 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 38/200
+2500/2500 - 4s - loss: 2.6474e-04 - loo: 0.0609 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 39/200
+2500/2500 - 5s - loss: 2.9845e-04 - loo: 0.0690 - lr: 0.0010 - 5s/epoch - 2ms/step
+Epoch 40/200
+2500/2500 - 4s - loss: 3.1721e-04 - loo: 0.0697 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 41/200
+2500/2500 - 4s - loss: 2.7837e-04 - loo: 0.0656 - lr: 0.0010 - 4s/epoch - 2ms/step
+Epoch 42/200
+2500/2500 - 5s - loss: 1.9031e-04 - loo: 0.0406 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 43/200
+2500/2500 - 4s - loss: 2.0051e-04 - loo: 0.0443 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 44/200
+2500/2500 - 5s - loss: 1.9641e-04 - loo: 0.0426 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 45/200
+2500/2500 - 4s - loss: 1.9197e-04 - loo: 0.0412 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 46/200
+2500/2500 - 4s - loss: 1.9202e-04 - loo: 0.0412 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 47/200
+2500/2500 - 4s - loss: 1.9337e-04 - loo: 0.0415 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 48/200
+2500/2500 - 5s - loss: 1.8876e-04 - loo: 0.0394 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 49/200
+2500/2500 - 4s - loss: 1.9527e-04 - loo: 0.0418 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 50/200
+2500/2500 - 4s - loss: 1.9555e-04 - loo: 0.0418 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 51/200
+2500/2500 - 4s - loss: 1.8953e-04 - loo: 0.0399 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 52/200
+2500/2500 - 4s - loss: 1.9429e-04 - loo: 0.0411 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 53/200
+2500/2500 - 5s - loss: 1.9075e-04 - loo: 0.0394 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 54/200
+2500/2500 - 4s - loss: 1.9534e-04 - loo: 0.0418 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 55/200
+2500/2500 - 5s - loss: 1.9043e-04 - loo: 0.0404 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 56/200
+2500/2500 - 4s - loss: 1.8789e-04 - loo: 0.0388 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 57/200
+2500/2500 - 5s - loss: 1.9321e-04 - loo: 0.0409 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 58/200
+2500/2500 - 5s - loss: 1.8865e-04 - loo: 0.0390 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 59/200
+2500/2500 - 5s - loss: 1.8904e-04 - loo: 0.0395 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 60/200
+2500/2500 - 5s - loss: 1.8720e-04 - loo: 0.0386 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 61/200
+2500/2500 - 4s - loss: 1.9132e-04 - loo: 0.0402 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 62/200
+2500/2500 - 4s - loss: 1.8687e-04 - loo: 0.0384 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 63/200
+2500/2500 - 4s - loss: 1.8937e-04 - loo: 0.0391 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 64/200
+2500/2500 - 4s - loss: 1.9448e-04 - loo: 0.0405 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 65/200
+2500/2500 - 5s - loss: 1.8674e-04 - loo: 0.0377 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 66/200
+2500/2500 - 4s - loss: 1.9043e-04 - loo: 0.0393 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 67/200
+2500/2500 - 4s - loss: 1.8861e-04 - loo: 0.0394 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 68/200
+2500/2500 - 5s - loss: 1.9280e-04 - loo: 0.0407 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 69/200
+2500/2500 - 4s - loss: 1.9504e-04 - loo: 0.0397 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 70/200
+2500/2500 - 5s - loss: 1.8463e-04 - loo: 0.0370 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 71/200
+2500/2500 - 4s - loss: 2.0032e-04 - loo: 0.0434 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 72/200
+2500/2500 - 4s - loss: 1.8730e-04 - loo: 0.0388 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 73/200
+2500/2500 - 4s - loss: 1.8904e-04 - loo: 0.0394 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 74/200
+2500/2500 - 5s - loss: 1.8858e-04 - loo: 0.0384 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 75/200
+2500/2500 - 4s - loss: 1.8935e-04 - loo: 0.0390 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 76/200
+2500/2500 - 5s - loss: 1.8884e-04 - loo: 0.0388 - lr: 5.0000e-04 - 5s/epoch - 2ms/step
+Epoch 77/200
+2500/2500 - 4s - loss: 1.8951e-04 - loo: 0.0396 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 78/200
+2500/2500 - 4s - loss: 1.8683e-04 - loo: 0.0380 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 79/200
+2500/2500 - 4s - loss: 1.8592e-04 - loo: 0.0378 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 80/200
+2500/2500 - 4s - loss: 1.8864e-04 - loo: 0.0393 - lr: 5.0000e-04 - 4s/epoch - 2ms/step
+Epoch 81/200
+2500/2500 - 4s - loss: 1.7103e-04 - loo: 0.0291 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 82/200
+2500/2500 - 5s - loss: 1.7300e-04 - loo: 0.0303 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 83/200
+2500/2500 - 5s - loss: 1.7295e-04 - loo: 0.0303 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 84/200
+2500/2500 - 4s - loss: 1.7243e-04 - loo: 0.0300 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 85/200
+2500/2500 - 5s - loss: 1.7275e-04 - loo: 0.0301 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 86/200
+2500/2500 - 5s - loss: 1.7207e-04 - loo: 0.0297 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 87/200
+2500/2500 - 4s - loss: 1.7231e-04 - loo: 0.0296 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 88/200
+2500/2500 - 5s - loss: 1.7190e-04 - loo: 0.0296 - lr: 2.5000e-04 - 5s/epoch - 2ms/step
+Epoch 89/200
+2500/2500 - 4s - loss: 1.7242e-04 - loo: 0.0299 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 90/200
+2500/2500 - 4s - loss: 1.7189e-04 - loo: 0.0296 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 91/200
+2500/2500 - 4s - loss: 1.7230e-04 - loo: 0.0299 - lr: 2.5000e-04 - 4s/epoch - 2ms/step
+Epoch 92/200
+2500/2500 - 5s - loss: 1.6814e-04 - loo: 0.0262 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 93/200
+2500/2500 - 4s - loss: 1.6839e-04 - loo: 0.0265 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 94/200
+2500/2500 - 4s - loss: 1.6835e-04 - loo: 0.0264 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 95/200
+2500/2500 - 5s - loss: 1.6833e-04 - loo: 0.0264 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 96/200
+2500/2500 - 4s - loss: 1.6823e-04 - loo: 0.0262 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 97/200
+2500/2500 - 4s - loss: 1.6818e-04 - loo: 0.0262 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 98/200
+2500/2500 - 5s - loss: 1.6813e-04 - loo: 0.0261 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 99/200
+2500/2500 - 5s - loss: 1.6810e-04 - loo: 0.0261 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 100/200
+2500/2500 - 4s - loss: 1.6806e-04 - loo: 0.0261 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 101/200
+2500/2500 - 4s - loss: 1.6801e-04 - loo: 0.0260 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 102/200
+2500/2500 - 4s - loss: 1.6798e-04 - loo: 0.0260 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 103/200
+2500/2500 - 4s - loss: 1.6791e-04 - loo: 0.0260 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 104/200
+2500/2500 - 4s - loss: 1.6783e-04 - loo: 0.0260 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 105/200
+2500/2500 - 4s - loss: 1.6764e-04 - loo: 0.0264 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 106/200
+2500/2500 - 5s - loss: 1.6723e-04 - loo: 0.0278 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 107/200
+2500/2500 - 4s - loss: 1.6652e-04 - loo: 0.0302 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 108/200
+2500/2500 - 5s - loss: 1.6619e-04 - loo: 0.0318 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 109/200
+2500/2500 - 5s - loss: 1.6502e-04 - loo: 0.0323 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 110/200
+2500/2500 - 5s - loss: 1.6502e-04 - loo: 0.0331 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 111/200
+2500/2500 - 5s - loss: 1.6429e-04 - loo: 0.0331 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 112/200
+2500/2500 - 4s - loss: 1.6385e-04 - loo: 0.0335 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 113/200
+2500/2500 - 4s - loss: 1.6132e-04 - loo: 0.0323 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 114/200
+2500/2500 - 4s - loss: 1.6501e-04 - loo: 0.0307 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 115/200
+2500/2500 - 4s - loss: 1.6675e-04 - loo: 0.0322 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 116/200
+2500/2500 - 4s - loss: 1.6379e-04 - loo: 0.0322 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 117/200
+2500/2500 - 4s - loss: 1.6115e-04 - loo: 0.0313 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 118/200
+2500/2500 - 4s - loss: 1.6455e-04 - loo: 0.0330 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 119/200
+2500/2500 - 4s - loss: 1.6310e-04 - loo: 0.0341 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 120/200
+2500/2500 - 5s - loss: 1.5887e-04 - loo: 0.0311 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 121/200
+2500/2500 - 5s - loss: 1.6541e-04 - loo: 0.0322 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 122/200
+2500/2500 - 4s - loss: 1.6468e-04 - loo: 0.0332 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 123/200
+2500/2500 - 4s - loss: 1.6228e-04 - loo: 0.0334 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 124/200
+2500/2500 - 4s - loss: 1.6360e-04 - loo: 0.0324 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 125/200
+2500/2500 - 4s - loss: 1.6259e-04 - loo: 0.0321 - lr: 1.2500e-04 - 4s/epoch - 2ms/step
+Epoch 126/200
+2500/2500 - 5s - loss: 1.6449e-04 - loo: 0.0302 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 127/200
+2500/2500 - 5s - loss: 1.6014e-04 - loo: 0.0316 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 128/200
+2500/2500 - 5s - loss: 1.6322e-04 - loo: 0.0319 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 129/200
+2500/2500 - 5s - loss: 1.6923e-04 - loo: 0.0310 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 130/200
+2500/2500 - 5s - loss: 1.6256e-04 - loo: 0.0311 - lr: 1.2500e-04 - 5s/epoch - 2ms/step
+Epoch 131/200
+2500/2500 - 4s - loss: 1.5223e-04 - loo: 0.0303 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 132/200
+2500/2500 - 5s - loss: 1.5040e-04 - loo: 0.0321 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 133/200
+2500/2500 - 4s - loss: 1.4350e-04 - loo: 0.0306 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 134/200
+2500/2500 - 4s - loss: 1.5763e-04 - loo: 0.0305 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 135/200
+2500/2500 - 5s - loss: 1.4878e-04 - loo: 0.0321 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 136/200
+2500/2500 - 5s - loss: 1.3809e-04 - loo: 0.0316 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 137/200
+2500/2500 - 4s - loss: 1.4691e-04 - loo: 0.0328 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 138/200
+2500/2500 - 4s - loss: 1.3771e-04 - loo: 0.0309 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 139/200
+2500/2500 - 4s - loss: 1.3726e-04 - loo: 0.0303 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 140/200
+2500/2500 - 4s - loss: 1.4595e-04 - loo: 0.0332 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 141/200
+2500/2500 - 4s - loss: 1.3636e-04 - loo: 0.0307 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 142/200
+2500/2500 - 5s - loss: 1.3545e-04 - loo: 0.0291 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 143/200
+2500/2500 - 5s - loss: 1.4085e-04 - loo: 0.0324 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 144/200
+2500/2500 - 4s - loss: 1.3513e-04 - loo: 0.0291 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 145/200
+2500/2500 - 4s - loss: 1.4174e-04 - loo: 0.0325 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 146/200
+2500/2500 - 5s - loss: 1.3429e-04 - loo: 0.0306 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 147/200
+2500/2500 - 4s - loss: 1.3361e-04 - loo: 0.0320 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 148/200
+2500/2500 - 4s - loss: 1.3453e-04 - loo: 0.0319 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 149/200
+2500/2500 - 5s - loss: 1.3421e-04 - loo: 0.0311 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 150/200
+2500/2500 - 5s - loss: 1.2995e-04 - loo: 0.0305 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 151/200
+2500/2500 - 4s - loss: 1.3448e-04 - loo: 0.0298 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 152/200
+2500/2500 - 4s - loss: 1.3400e-04 - loo: 0.0310 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 153/200
+2500/2500 - 5s - loss: 1.2952e-04 - loo: 0.0301 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 154/200
+2500/2500 - 4s - loss: 1.5350e-04 - loo: 0.0310 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 155/200
+2500/2500 - 5s - loss: 1.3900e-04 - loo: 0.0306 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 156/200
+2500/2500 - 4s - loss: 1.3457e-04 - loo: 0.0305 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 157/200
+2500/2500 - 5s - loss: 1.2512e-04 - loo: 0.0296 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 158/200
+2500/2500 - 5s - loss: 1.4831e-04 - loo: 0.0304 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 159/200
+2500/2500 - 4s - loss: 1.2898e-04 - loo: 0.0294 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 160/200
+2500/2500 - 5s - loss: 1.4371e-04 - loo: 0.0320 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 161/200
+2500/2500 - 4s - loss: 1.4099e-04 - loo: 0.0328 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 162/200
+2500/2500 - 4s - loss: 1.2768e-04 - loo: 0.0297 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 163/200
+2500/2500 - 5s - loss: 1.3351e-04 - loo: 0.0316 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 164/200
+2500/2500 - 5s - loss: 1.2770e-04 - loo: 0.0298 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 165/200
+2500/2500 - 4s - loss: 1.1923e-04 - loo: 0.0305 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 166/200
+2500/2500 - 5s - loss: 1.2946e-04 - loo: 0.0293 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 167/200
+2500/2500 - 5s - loss: 1.2786e-04 - loo: 0.0303 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 168/200
+2500/2500 - 4s - loss: 1.3436e-04 - loo: 0.0314 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 169/200
+2500/2500 - 4s - loss: 1.2885e-04 - loo: 0.0312 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 170/200
+2500/2500 - 4s - loss: 1.3749e-04 - loo: 0.0299 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 171/200
+2500/2500 - 5s - loss: 1.2610e-04 - loo: 0.0304 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 172/200
+2500/2500 - 4s - loss: 1.2674e-04 - loo: 0.0287 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 173/200
+2500/2500 - 4s - loss: 1.4215e-04 - loo: 0.0318 - lr: 6.2500e-05 - 4s/epoch - 2ms/step
+Epoch 174/200
+2500/2500 - 5s - loss: 1.3951e-04 - loo: 0.0329 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 175/200
+2500/2500 - 5s - loss: 1.2869e-04 - loo: 0.0300 - lr: 6.2500e-05 - 5s/epoch - 2ms/step
+Epoch 176/200
+2500/2500 - 4s - loss: 1.1659e-04 - loo: 0.0292 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 177/200
+2500/2500 - 5s - loss: 1.0443e-04 - loo: 0.0278 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 178/200
+2500/2500 - 4s - loss: 9.8959e-05 - loo: 0.0270 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 179/200
+2500/2500 - 5s - loss: 1.0270e-04 - loo: 0.0267 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 180/200
+2500/2500 - 4s - loss: 9.4172e-05 - loo: 0.0261 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 181/200
+2500/2500 - 4s - loss: 9.3338e-05 - loo: 0.0253 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 182/200
+2500/2500 - 4s - loss: 9.6500e-05 - loo: 0.0253 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 183/200
+2500/2500 - 4s - loss: 9.5268e-05 - loo: 0.0253 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 184/200
+2500/2500 - 5s - loss: 1.0249e-04 - loo: 0.0254 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 185/200
+2500/2500 - 5s - loss: 9.7397e-05 - loo: 0.0256 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 186/200
+2500/2500 - 4s - loss: 7.7669e-05 - loo: 0.0225 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 187/200
+2500/2500 - 4s - loss: 8.9003e-05 - loo: 0.0238 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 188/200
+2500/2500 - 4s - loss: 1.2990e-04 - loo: 0.0273 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 189/200
+2500/2500 - 5s - loss: 9.5036e-05 - loo: 0.0255 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 190/200
+2500/2500 - 4s - loss: 9.4149e-05 - loo: 0.0261 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 191/200
+2500/2500 - 5s - loss: 8.9257e-05 - loo: 0.0239 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 192/200
+2500/2500 - 5s - loss: 1.0146e-04 - loo: 0.0252 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 193/200
+2500/2500 - 4s - loss: 9.4477e-05 - loo: 0.0251 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 194/200
+2500/2500 - 4s - loss: 7.6297e-05 - loo: 0.0222 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 195/200
+2500/2500 - 4s - loss: 8.1193e-05 - loo: 0.0225 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 196/200
+2500/2500 - 5s - loss: 8.9281e-05 - loo: 0.0243 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 197/200
+2500/2500 - 4s - loss: 7.3384e-05 - loo: 0.0215 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Epoch 198/200
+2500/2500 - 5s - loss: 8.2886e-05 - loo: 0.0227 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 199/200
+2500/2500 - 5s - loss: 1.0154e-04 - loo: 0.0243 - lr: 3.1250e-05 - 5s/epoch - 2ms/step
+Epoch 200/200
+2500/2500 - 4s - loss: 7.5463e-05 - loo: 0.0220 - lr: 3.1250e-05 - 4s/epoch - 2ms/step
+Total training time: 898.2901384830475 [s]
+236800/236800 - 298s - 298s/epoch - 1ms/step
+Model: "model_5"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_6 (InputLayer)        [(None, 4)]               0         
+                                                                 
+ dense_49 (Dense)            (None, 100)               500       
+                                                                 
+ dense_50 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_51 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_52 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_53 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_54 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_55 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_56 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_57 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_58 (Dense)            (None, 100)               10100     
+                                                                 
+ dense_59 (Dense)            (None, 3)                 303       
+                                                                 
+=================================================================
+Total params: 91,703
+Trainable params: 91,703
+Non-trainable params: 0
+_________________________________________________________________
+{'xi_kind': 'param', 'depth': 10, 'width': 100, 'activation': 'tanh', 'subsample_size': 80000, 'batch_size': 32}
+----------------------
+err_loo: 0.9980280609277914
+err_mae: 0.001582809658598699
+err_mse: 0.013138960296703079
+----------------------
